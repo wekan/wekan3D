@@ -121,7 +121,7 @@ func _fixture() -> Dictionary:
 	var board_two = {"id": "board2", "room_id": "", "slot_id": "", "topic": 1, "title": {"fi": "Julkaisutaulu", "en": "Release board"}, "swimlanes": [lane_three], "lists": lane_three.lists, "cards": lane_three.cards}
 	var card_data: Dictionary = {}
 	for identifier in ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]:
-		card_data[identifier] = {"id": identifier, "topic": 0, "lines": {"fi": ["Tehtävä " + identifier, "Tarkista osat", "Kokoa robotti", "Testaa liike"], "en": ["Task " + identifier, "Check the parts", "Assemble robot", "Test movement"]}, "details": {"custom": "säilytä kaikki", "estimate": 12.5}, "localized_details": {"fi": {"description": "Suomenkielinen kuvaus"}, "en": {"description": "English description"}}, "related": {"comments": [{"text": "Test note"}]}}
+		card_data[identifier] = {"id": identifier, "topic": 0, "lines": {"fi": ["Tehtävä " + identifier, "Tarkista osat", "Kokoa robotti", "Testaa liike"], "en": ["Task " + identifier, "Check the parts", "Assemble robot", "Test movement"]}, "details": {"custom": "preserve everything", "estimate": 12.5}, "localized_details": {"fi": {"description": "Suomenkielinen kuvaus"}, "en": {"description": "English description"}}, "related": {"comments": [{"text": "Test note"}]}}
 	return {
 		"version": 2, "catalog_version": 1, "language": "fi", "started_at": "2026-09-08T01:02:03", "elapsed_seconds": 123.125,
 		"visited_rooms": {"room": true},

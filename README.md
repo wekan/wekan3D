@@ -1,81 +1,125 @@
-# Kanban Office — Työn talo
+# Kanban Office — House of Work
 
-Suomen- ja englanninkielinen, muokattava 3D-toimistopeli **Redot 26.2** -pelimoottorille. Neljä kerrosta, 16 toimistoa, 64 eri aiheista kanban-taulua ja aluksi 1 024 nelirivistä korttia. Grafiikka, hahmot ja kalusteet tuotetaan projektin mukana tulevasta lähdekoodista. Erillisiä aineistopaketteja tai lisäosia ei tarvita.
+An editable 3D office game in Finnish and English for **Redot 26.2**. Four floors,
+16 offices, 64 kanban boards with different topics, and initially 1,024 cards with
+four lines each. Graphics, characters and furniture are generated from the
+included source code. No separate asset packs or addons are required.
 
-## Käynnistys
+## Getting started
 
-1. Pura ZIP kokonaan omaan kansioon.
-2. Avaa [Redot](https://redotengine.org/) ja valitse **Import / Tuo**.
-3. Valitse `redot_kanban_office/project.godot` ja avaa projekti.
-4. Käynnistä peli **F6 sijasta F5:llä** (Run Project).
+1. Extract the entire ZIP into its own directory.
+2. Open [Redot](https://redotengine.org/) and select **Import**.
+3. Select `redot_kanban_office/project.godot` and open the project.
+4. Start the game with **F5** (Run Project), rather than F6.
 
-Komentoriviltä: `redot --path /polku/redot_kanban_office --editor`, tai suoraan peliin `redot --path /polku/redot_kanban_office`.
+From the command line: `redot --path /path/to/redot_kanban_office --editor`, or
+start the game directly with `redot --path /path/to/redot_kanban_office`.
 
-Projekti käyttää Compatibility-renderöintiä (OpenGL). ZIP on täydellinen lähdeprojekti; siihen ei sisälly Redot-editoria tai valmiiksi vietyä Windows/Linux-pelitiedostoa. Tavallinen Redot-versio riittää; .NET-versiota ei tarvita.
+The project uses Compatibility rendering (OpenGL). The ZIP contains the complete
+source project, without the Redot editor or an exported Windows/Linux game
+executable. The standard Redot version is sufficient; .NET is not required.
 
-## Ohjaus
+## Controls
 
-| Toiminto | Näppäimistö ja hiiri | USB-peliohjain |
+| Action | Keyboard and mouse | USB controller |
 |---|---|---|
-| Kävele eteen / taakse | Nuoli ylös / alas tai W / S | Vasen sauva tai ristiohjain ylös / alas |
-| Käänny | Nuoli vasemmalle / oikealle | Oikea sauva tai ristiohjain vasen / oikea |
-| Liiku sivuttain | A / D | Vasen sauva |
-| Katso ympärille | Oikea hiiripainike pohjassa + hiiri; Page Up / Down | Oikea sauva |
-| Juokse | Shift | Vasemman sauvan painallus |
-| Avaa taulu / keskustele / aseta kannettu kortti | E / Enter | A (alapainike) |
-| Siirrä tähdätty kortti taskuun | P | X (vasen painike) |
-| Avaa tasku | I / Tab tai yläpalkin taskupainike | Y (yläpainike) |
-| Sulje näkymä / jätä kannettu kortti taskuun | Esc | B (oikea painike) |
-| Ohjeet | F1 tai keskustelu respassa | Keskustelu respassa |
-| Valitse näkymän painikkeita | Tab, nuolinäppäimet, Enter | Ristiohjain, A |
-| Vaihda kieli | Yläkulman Suomi / English | Kohdista kielipainikkeeseen ja paina A |
+| Walk forward / backward | Up / down arrow or W / S | Left stick or D-pad up / down |
+| Turn | Left / right arrow | Right stick or D-pad left / right |
+| Strafe | A / D | Left stick |
+| Look around | Hold right mouse button and move mouse; Page Up / Down | Right stick |
+| Run | Shift | Press left stick |
+| Open board / talk / place carried card | E / Enter | A (bottom button) |
+| Put targeted card in pocket | P | X (left button) |
+| Open pocket | I / Tab or top-bar pocket button | Y (top button) |
+| Close view / leave carried card in pocket | Esc | B (right button) |
+| Help | F1 or talk at reception | Talk at reception |
+| Select view buttons | Tab, arrow keys, Enter | D-pad, A |
+| Switch language | Suomi / English in the upper corner | Focus language button and press A |
 
-Peliohjain käyttää Redotin tunnistamia tavallisia USB/SDL-ohjainmäärityksiä. Painikkeiden kirjaimet yllä ovat Xbox-tyyliset; vastaavat PlayStation-/muut painikkeet määräytyvät fyysisen sijainnin mukaan. Fyysistä USB-ohjainta ei ollut käytettävissä kehitysympäristössä; automaattiset testit tarkistavat syötteiden määritykset.
+The controller uses standard USB/SDL mappings recognized by Redot. Button letters
+above follow the Xbox layout; corresponding PlayStation and other buttons are
+identified by physical position. No physical USB controller was available in the
+development environment; automated tests check the input mappings.
 
-## Pelaaminen
+## Playing
 
-Aloitat ensimmäisestä kerroksesta kasvot vastaanottoon päin. Aino ja Maya vastaavat klikattavilla vastausvaihtoehdoilla peruskysymyksiin. Käytävä kulkee rakennuksen keskellä. Portaikko on käytävän perällä, vastaanotosta eteenpäin. Jokainen kerros sisältää neljä numeroitua toimistoa. Kerrosten välillä kuljetaan kävelemällä portaissa.
+You start on the first floor facing reception. Aino and Maya answer basic
+questions through clickable dialogue choices. A central corridor runs through
+the building. The stairs are at the far end, beyond reception. Each floor has
+four numbered offices. Walk up or down the stairs to move between floors.
 
-Jokaisen toimiston neljällä seinällä on oma taulu. Taulun rakenne on nimi, Swimlane 1, neljä vasemmalta oikealle kulkevaa listaa ja aluksi neljä korttia kussakin listassa. Jokainen kortti sisältää neljä tekstiriviä. Aiheet käsittelevät esimerkiksi auton rakentamista, kanban-ohjelmiston kehittämistä ja robotin kokoamista. Työtoverit keskustelevat aiheista puhekuplissa ja siirtävät oikeita kortteja huoneensa taulujen välillä. He väistävät pelaajaa.
+Each of an office's four walls has a board. A board has a name, Swimlane 1, four
+lists running left to right, and initially four cards per list. Each card has
+four lines of text. Topics include building a car, developing kanban software
+and assembling a robot. Colleagues discuss topics in speech bubbles and move
+real cards between their room's boards. They move aside for the player.
 
-### Kortin siirtäminen
+### Moving a card
 
-- **Suoraan 3D-maailmassa:** osoita lähellä olevaa korttia, paina vasen hiiripainike, vedä toisen taulun haluttuun listaan ja vapauta. Hiiren osoitin määrää kohteen; peliohjaimella käytetään ruudun keskikohtaa.
-- **Huoneesta toiseen:** klikkaa korttia kantaaksesi sitä tai paina P / X siirtääksesi sen taskuun. Avaa tasku, valitse kortti kannettavaksi, kävele toiseen huoneeseen ja klikkaa kohdelistaa tai paina A. Kannettu kortti on turvallisesti taskussa siihen asti, että asetat sen taululle.
-- **Taulujen lähinäkymä:** avaa taulu E / A. Valitse saman huoneen taulut rinnakkaisiin näkymiin. Vedä kortteja listasta tai taulusta toiseen tai taskuun. Näkymässä on myös painikkeilla käytettävä siirtotapa.
-- **Tasku:** yläpalkin taskupainike tai I / Y avaa koko ruudun sivutetun näkymän. Esc / B palauttaa peliin.
+- **Directly in the 3D world:** point at a nearby card, hold the left mouse button,
+  drag it to the desired list on another board, and release. The mouse pointer
+  determines the target; controllers use the center of the screen.
+- **Between rooms:** click a card to carry it, or press P / X to pocket it. Open
+  the pocket, select a card to carry, walk to another room, and click the target
+  list or press A. The carried card stays safely in the pocket until placed.
+- **Board close-up:** open a board with E / A. Select boards from the same room
+  for side-by-side views. Drag cards between lists or boards, or into the pocket.
+  Buttons also provide a way to move cards.
+- **Pocket:** the top-bar pocket button or I / Y opens a paginated fullscreen
+  view. Esc / B returns to the game.
 
-Siirtojen jälkeen listassa voi olla enemmän kuin neljä korttia. Seinän taulu näyttää ensimmäiset neljä ja ylimääräisten määrän; kaikki kortit saa esiin vieritettävässä lähinäkymässä. Työtoverien kortinsiirrot pysähtyvät lähinäkymän ajaksi.
+After moves, a list may contain more than four cards. Wall boards show the first
+four and the number of additional cards; all cards are accessible in the
+scrollable close-up. Colleagues pause card moves while a close-up is open.
 
-## Pysyvä tallennus ja tietorakenne
+## Persistent storage and data structure
 
-Peli käyttää paikallista **SQLite-tietokantaa `officegame.sqlite`**. Se luodaan ensimmäisellä käynnistyksellä oletussisällöllä: rakennus, neljä kerrosta, työtilat, taulut, kortit, henkilöt, huonekalut ja kaksikieliset tekstit. Ensisijainen sijainti on vietävän peliohjelman vieressä; jos kansioon ei voi kirjoittaa, peli käyttää käyttöjärjestelmän Redot-käyttäjädatakansiota.
+The game uses a local **SQLite database, `officegame.sqlite`**. On first launch,
+it is created with default content: a building, four floors, workspaces, boards,
+cards, people, furniture and bilingual text. Its preferred location is beside
+the exported game executable; if that directory is not writable, the game uses
+the operating system's Redot user-data directory.
 
-Tietokanta sisältää myös toimitettujen WeKan-mallien vastaavat tietueet, kortin päivämääräkentät sekä hakemiston kaikelle tekstille. Haku löytää esimerkiksi huoneen nimen, kerroksen, kortin tekstin, ihmisen nimen, tittelin, kysymyksen, vastauksen ja huonekalun nimen. Rakennus on organisaatio ja jokainen toimistohuone on työtila (`workspace`). Tarkka SQL-mappaus on `docs/DATABASE_MAPPING.md`.
+The database also contains corresponding records for the supplied WeKan models,
+card date fields and an index of all text. Search finds room names, floors, card
+text, people's names, job titles, questions, answers and furniture names. A
+building is an organization and each office room is a workspace. The precise SQL
+mapping is documented in `docs/DATABASE_MAPPING.md`.
 
-### Tilojen ja esineiden muokkaus
+### Editing spaces and objects
 
-Yläpalkin hallinta-avauksesta voi lisätä, nimetä, poistaa ja taskuttaa rakennuksia, kerroksia ja työtiloja. Kerroksen tai työtilan taskuttaminen säilyttää sen taulut, henkilöt ja esineet yhtenä kokonaisuutena; taskun sijoitusnäkymällä sen voi asettaa toiseen rakennukseen tai kerrokseen.
+The management view in the top bar lets you add, rename, delete and pocket
+buildings, floors and workspaces. Pocketing a floor or workspace keeps its boards,
+people and objects together; the pocket placement view can move the entire group
+to another building or floor.
 
-Esinepaneelissa voi lisätä ja käsitellä kalusteita, puita, ajoneuvoja, apuvälineitä, eläimiä, kukkia, teitä ja pöytäesineitä. Jokaisella on nimi, taskutoiminto ja poisto. Väri valitaan väriympyrästä ja leveys, korkeus sekä syvyys asetetaan erikseen. Henkilölle voi muuttaa nimen, ikäryhmän, tiimin, tittelin, osaamisen sekä kysymys–vastausparit. Muutokset tallennetaan aktiivisella kielellä tietokantaan.
+The object panel lets you add and manage furniture, trees, vehicles, assistive
+devices, animals, flowers, roads and desktop items. Each has a name and pocket
+and delete actions. Choose a color from the color wheel and set width, height
+and depth separately. For people, edit the name, age group, team, job title,
+expertise and question–answer pairs. Changes are saved in the active language.
 
-Tallennus tehdään automaattisesti pelin aikana ja suljettaessa. Se ladataan seuraavalla käynnistyksellä. Aloituspaikka on aina vastaanoton edessä, mutta maailman muokkaukset, kortit ja pelitilastot säilyvät.
+The game saves automatically during play and on exit, then loads the save on
+next launch. You always start in front of reception, but world edits, cards and
+game statistics persist.
 
-## Projektin rakenne
+## Project structure
 
-| Hakemisto / tiedosto | Sisältö |
+| Directory / file | Contents |
 |---|---|
-| `project.godot`, `scenes/main.tscn` | Redot-projekti ja aloituskohtaus |
-| `scripts/main.gd` | Osien yhdistäminen, vuorovaikutus, automaattitallennus |
-| `scripts/core/` | Kaksikielinen aineisto, tilagraafi, SQLite-tallennus ja hakemisto |
-| `scripts/world/` | Rakennus, kalusteet, portaat, ulkomaisema |
-| `scripts/actors/` | Pelaaja, ohjaus ja toimistohahmot |
-| `scripts/kanban/` | 3D-taulujen piirtäminen ja kohdistaminen |
-| `scripts/ui/` | Yläpalkki, haku, tasku, taulunäkymät, muokkaimet ja tilahallinta |
-| `tests/` | Toiminnalliset automaattitestit |
-| `docs/` | Arkkitehtuuri, testiraportti ja englanninkieliset ohjeet |
-| `ROADMAP.md` | Työpaketit, eteneminen ja valmius |
+| `project.godot`, `scenes/main.tscn` | Redot project and initial scene |
+| `scripts/main.gd` | Component integration, interaction and autosave |
+| `scripts/core/` | Bilingual data, state graph, SQLite storage and search index |
+| `scripts/world/` | Building, furniture, stairs and outdoor scenery |
+| `scripts/actors/` | Player, controls and office characters |
+| `scripts/kanban/` | Drawing and targeting 3D boards |
+| `scripts/ui/` | Top bar, search, pocket, board views, editors and space management |
+| `tests/` | Automated functional tests |
+| `docs/` | Architecture, test report and English instructions |
+| `ROADMAP.md` | Work packages, progress and completion status |
 
-## Lisenssi
+## License
 
-Projektin alkuperäinen lähdekoodi ja ohjelmallisesti luotu aineisto: MIT, katso `LICENSE`. Redot-moottori on erillinen ohjelmisto omine lisensseineen. Projekti ei sisällä kaupallisia aineistoja, seurantaa tai verkkopalveluriippuvuutta.
+Original source code and procedurally generated assets: MIT, see `LICENSE`.
+The Redot engine is separate software with its own licenses. The project includes
+no commercial assets, tracking or web-service dependency.
