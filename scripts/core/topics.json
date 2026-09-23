@@ -1,0 +1,4162 @@
+[
+  {
+    "id": "topic_00",
+    "title": {
+      "fi": "Auton rakentaminen",
+      "en": "Building a car"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Runko",
+          "en": "Chassis"
+        },
+        "work": {
+          "fi": "hitsaa runkoliitokset",
+          "en": "weld chassis joints"
+        },
+        "accept": {
+          "fi": "ristimitat täsmäävät",
+          "en": "diagonals match"
+        }
+      },
+      {
+        "name": {
+          "fi": "Voimansiirto",
+          "en": "Drivetrain"
+        },
+        "work": {
+          "fi": "asenna moottori ja vaihteisto",
+          "en": "fit engine and gearbox"
+        },
+        "accept": {
+          "fi": "vaihteet kytkeytyvät",
+          "en": "gears engage"
+        }
+      },
+      {
+        "name": {
+          "fi": "Jarrut",
+          "en": "Brakes"
+        },
+        "work": {
+          "fi": "ilmaa jarrupiiri",
+          "en": "bleed brake circuit"
+        },
+        "accept": {
+          "fi": "poljin pitää paineen",
+          "en": "pedal holds pressure"
+        }
+      },
+      {
+        "name": {
+          "fi": "Sähköt",
+          "en": "Electrics"
+        },
+        "work": {
+          "fi": "kytke valot ja sulakkeet",
+          "en": "wire lights and fuses"
+        },
+        "accept": {
+          "fi": "kaikki valot toimivat",
+          "en": "all lights work"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_01",
+    "title": {
+      "fi": "Kanban-ohjelman kehitys",
+      "en": "Kanban app development"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Taulumalli",
+          "en": "Board model"
+        },
+        "work": {
+          "fi": "lisää listat ja uimaradat",
+          "en": "add lists and swimlanes"
+        },
+        "accept": {
+          "fi": "kortilla yksi sijainti",
+          "en": "one location per card"
+        }
+      },
+      {
+        "name": {
+          "fi": "Raahaus",
+          "en": "Drag and drop"
+        },
+        "work": {
+          "fi": "toteuta siirron esikatselu",
+          "en": "implement move preview"
+        },
+        "accept": {
+          "fi": "peruutus säilyttää kortin",
+          "en": "cancel preserves card"
+        }
+      },
+      {
+        "name": {
+          "fi": "Käyttöoikeudet",
+          "en": "Permissions"
+        },
+        "work": {
+          "fi": "rajaa jäsenten muokkaus",
+          "en": "restrict member edits"
+        },
+        "accept": {
+          "fi": "vieras vain lukee",
+          "en": "guest is read-only"
+        }
+      },
+      {
+        "name": {
+          "fi": "Tallennus",
+          "en": "Persistence"
+        },
+        "work": {
+          "fi": "kirjoita siirrot kantaan",
+          "en": "persist moves to database"
+        },
+        "accept": {
+          "fi": "uudelleenavaus täsmää",
+          "en": "reopened state matches"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_02",
+    "title": {
+      "fi": "Robotin kokoaminen",
+      "en": "Robot assembly"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Runko ja nivelet",
+          "en": "Frame and joints"
+        },
+        "work": {
+          "fi": "kiinnitä nivelmoottorit",
+          "en": "mount joint motors"
+        },
+        "accept": {
+          "fi": "liike ilman välystä",
+          "en": "movement has no play"
+        }
+      },
+      {
+        "name": {
+          "fi": "Anturit",
+          "en": "Sensors"
+        },
+        "work": {
+          "fi": "kytke etäisyysanturit",
+          "en": "wire distance sensors"
+        },
+        "accept": {
+          "fi": "este havaitaan 30 cm",
+          "en": "detect obstacle at 30 cm"
+        }
+      },
+      {
+        "name": {
+          "fi": "Ohjaus",
+          "en": "Controller"
+        },
+        "work": {
+          "fi": "kalibroi liikesilmukka",
+          "en": "calibrate motion loop"
+        },
+        "accept": {
+          "fi": "pysähtyy 5 cm sisällä",
+          "en": "stops within 5 cm"
+        }
+      },
+      {
+        "name": {
+          "fi": "Turvapysäytys",
+          "en": "Emergency stop"
+        },
+        "work": {
+          "fi": "kytke pysäytyspainike",
+          "en": "wire emergency button"
+        },
+        "accept": {
+          "fi": "virta katkeaa heti",
+          "en": "power cuts immediately"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_03",
+    "title": {
+      "fi": "Verkkokaupan julkaisu",
+      "en": "Online store launch"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Tuoteluettelo",
+          "en": "Product catalog"
+        },
+        "work": {
+          "fi": "tuo tuotteet ja kuvat",
+          "en": "import products and images"
+        },
+        "accept": {
+          "fi": "hinta näkyy veroineen",
+          "en": "tax-inclusive price shown"
+        }
+      },
+      {
+        "name": {
+          "fi": "Ostoskori",
+          "en": "Shopping cart"
+        },
+        "work": {
+          "fi": "laske määrät ja alennus",
+          "en": "calculate totals and discount"
+        },
+        "accept": {
+          "fi": "summa sentilleen oikein",
+          "en": "total correct to the cent"
+        }
+      },
+      {
+        "name": {
+          "fi": "Maksaminen",
+          "en": "Checkout"
+        },
+        "work": {
+          "fi": "liitä maksupalvelu",
+          "en": "connect payment service"
+        },
+        "accept": {
+          "fi": "kuitti ilman tuplatilausta",
+          "en": "receipt, no duplicate order"
+        }
+      },
+      {
+        "name": {
+          "fi": "Toimitus",
+          "en": "Shipping"
+        },
+        "work": {
+          "fi": "luo pakkauslista",
+          "en": "generate packing slip"
+        },
+        "accept": {
+          "fi": "osoite ja paino oikein",
+          "en": "address and weight correct"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_04",
+    "title": {
+      "fi": "Mobiilisovelluksen kehitys",
+      "en": "Mobile app development"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Kirjautuminen",
+          "en": "Sign-in"
+        },
+        "work": {
+          "fi": "lisää avaintunnistus",
+          "en": "add passkey sign-in"
+        },
+        "accept": {
+          "fi": "istunto voidaan sulkea",
+          "en": "session can be revoked"
+        }
+      },
+      {
+        "name": {
+          "fi": "Offline-tila",
+          "en": "Offline mode"
+        },
+        "work": {
+          "fi": "jonota paikalliset muutokset",
+          "en": "queue local edits"
+        },
+        "accept": {
+          "fi": "ei hävikkiä paluussa",
+          "en": "no loss on reconnect"
+        }
+      },
+      {
+        "name": {
+          "fi": "Ilmoitukset",
+          "en": "Notifications"
+        },
+        "work": {
+          "fi": "luo ilmoitusasetukset",
+          "en": "create alert preferences"
+        },
+        "accept": {
+          "fi": "äänettömyys toimii",
+          "en": "quiet mode works"
+        }
+      },
+      {
+        "name": {
+          "fi": "Julkaisu",
+          "en": "Release"
+        },
+        "work": {
+          "fi": "paketoi allekirjoitettu versio",
+          "en": "package signed release"
+        },
+        "accept": {
+          "fi": "puhdas asennus käynnistyy",
+          "en": "clean install launches"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_05",
+    "title": {
+      "fi": "Tietokannan siirto",
+      "en": "Database migration"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Kartoitus",
+          "en": "Inventory"
+        },
+        "work": {
+          "fi": "luetteloi taulut ja avaimet",
+          "en": "list tables and keys"
+        },
+        "accept": {
+          "fi": "kaikki riippuvuudet mukana",
+          "en": "all dependencies included"
+        }
+      },
+      {
+        "name": {
+          "fi": "Muunnos",
+          "en": "Transformation"
+        },
+        "work": {
+          "fi": "muunna aikaleimat UTC:ksi",
+          "en": "convert timestamps to UTC"
+        },
+        "accept": {
+          "fi": "kesäaika säilyy oikein",
+          "en": "daylight offsets preserved"
+        }
+      },
+      {
+        "name": {
+          "fi": "Siirtoajo",
+          "en": "Migration run"
+        },
+        "work": {
+          "fi": "kopioi erissä tapahtumittain",
+          "en": "copy in transactional batches"
+        },
+        "accept": {
+          "fi": "rivimäärät täsmäävät",
+          "en": "row counts match"
+        }
+      },
+      {
+        "name": {
+          "fi": "Palautus",
+          "en": "Rollback"
+        },
+        "work": {
+          "fi": "harjoittele varmuuspalautus",
+          "en": "rehearse backup restore"
+        },
+        "accept": {
+          "fi": "palautuu 15 minuutissa",
+          "en": "restores in 15 minutes"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_06",
+    "title": {
+      "fi": "Pilvipalvelun pystytys",
+      "en": "Cloud service setup"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Verkko",
+          "en": "Network"
+        },
+        "work": {
+          "fi": "erota julkinen ja yksityinen",
+          "en": "split public and private"
+        },
+        "accept": {
+          "fi": "kanta ei näy internetiin",
+          "en": "database not public"
+        }
+      },
+      {
+        "name": {
+          "fi": "Palvelimet",
+          "en": "Servers"
+        },
+        "work": {
+          "fi": "luo toistettava kokoonpano",
+          "en": "create repeatable config"
+        },
+        "accept": {
+          "fi": "uusi solmu 5 minuutissa",
+          "en": "new node in 5 minutes"
+        }
+      },
+      {
+        "name": {
+          "fi": "Valvonta",
+          "en": "Monitoring"
+        },
+        "work": {
+          "fi": "kytke viivehälytykset",
+          "en": "connect latency alerts"
+        },
+        "accept": {
+          "fi": "hälytys minuutissa",
+          "en": "minutely alert delivery"
+        }
+      },
+      {
+        "name": {
+          "fi": "Varmistukset",
+          "en": "Backups"
+        },
+        "work": {
+          "fi": "ajasta salattu kopio",
+          "en": "schedule encrypted backup"
+        },
+        "accept": {
+          "fi": "palautustesti onnistuu",
+          "en": "restore test passes"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_07",
+    "title": {
+      "fi": "Tapahtuman järjestäminen",
+      "en": "Event organization"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Ohjelma",
+          "en": "Program"
+        },
+        "work": {
+          "fi": "varaa puhujat ja ajat",
+          "en": "book speakers and slots"
+        },
+        "accept": {
+          "fi": "ei päällekkäisiä puheita",
+          "en": "no overlapping talks"
+        }
+      },
+      {
+        "name": {
+          "fi": "Tila",
+          "en": "Venue"
+        },
+        "work": {
+          "fi": "merkitse kulkureitit",
+          "en": "mark access routes"
+        },
+        "accept": {
+          "fi": "esteetön sisäänpääsy",
+          "en": "step-free entrance"
+        }
+      },
+      {
+        "name": {
+          "fi": "Ilmoittautuminen",
+          "en": "Registration"
+        },
+        "work": {
+          "fi": "avaa osallistujalomake",
+          "en": "open attendee form"
+        },
+        "accept": {
+          "fi": "vahvistusviesti saapuu",
+          "en": "confirmation arrives"
+        }
+      },
+      {
+        "name": {
+          "fi": "Toteutus",
+          "en": "Event delivery"
+        },
+        "work": {
+          "fi": "jaa vastuut vuoroittain",
+          "en": "assign shift responsibilities"
+        },
+        "accept": {
+          "fi": "jokaisella vuorolla vetäjä",
+          "en": "every shift has a lead"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_08",
+    "title": {
+      "fi": "Polkupyörän huolto",
+      "en": "Bicycle servicing"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Ketju",
+          "en": "Chain"
+        },
+        "work": {
+          "fi": "puhdista ja voitele ketju",
+          "en": "clean and lubricate chain"
+        },
+        "accept": {
+          "fi": "venymä alle 0,5 %",
+          "en": "stretch below 0.5%"
+        }
+      },
+      {
+        "name": {
+          "fi": "Jarrupalat",
+          "en": "Brake pads"
+        },
+        "work": {
+          "fi": "kohdista palat vanteelle",
+          "en": "align pads to rim"
+        },
+        "accept": {
+          "fi": "rengas pyörii vapaasti",
+          "en": "wheel spins freely"
+        }
+      },
+      {
+        "name": {
+          "fi": "Vaihteet",
+          "en": "Gears"
+        },
+        "work": {
+          "fi": "säädä vaihtajan rajoittimet",
+          "en": "adjust derailleur limits"
+        },
+        "accept": {
+          "fi": "ketju ei putoa",
+          "en": "chain cannot fall off"
+        }
+      },
+      {
+        "name": {
+          "fi": "Renkaat",
+          "en": "Tires"
+        },
+        "work": {
+          "fi": "tarkista pinta ja paine",
+          "en": "check tread and pressure"
+        },
+        "accept": {
+          "fi": "paine kyljen rajoissa",
+          "en": "pressure in sidewall range"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_09",
+    "title": {
+      "fi": "Aurinkovoimalan asennus",
+      "en": "Solar installation"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Kattokartoitus",
+          "en": "Roof survey"
+        },
+        "work": {
+          "fi": "mittaa varjot ja kantavuus",
+          "en": "measure shade and roof load"
+        },
+        "accept": {
+          "fi": "kiinnitysalue hyväksytty",
+          "en": "mounting area approved"
+        }
+      },
+      {
+        "name": {
+          "fi": "Paneelit",
+          "en": "Panels"
+        },
+        "work": {
+          "fi": "kiinnitä paneelikiskot",
+          "en": "fit panel rails"
+        },
+        "accept": {
+          "fi": "momentit dokumentoitu",
+          "en": "torques recorded"
+        }
+      },
+      {
+        "name": {
+          "fi": "Invertteri",
+          "en": "Inverter"
+        },
+        "work": {
+          "fi": "kytke sähköammattilaisella",
+          "en": "have electrician connect"
+        },
+        "accept": {
+          "fi": "eristysmittaus hyväksytty",
+          "en": "insulation test passed"
+        }
+      },
+      {
+        "name": {
+          "fi": "Seuranta",
+          "en": "Energy monitoring"
+        },
+        "work": {
+          "fi": "liitä tuottomittari",
+          "en": "connect generation meter"
+        },
+        "accept": {
+          "fi": "päivätuotto kirjautuu",
+          "en": "daily output is recorded"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_10",
+    "title": {
+      "fi": "Pelin kehitys",
+      "en": "Game development"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Ohjaus",
+          "en": "Controls"
+        },
+        "work": {
+          "fi": "viritä kävely ja kamera",
+          "en": "tune walking and camera"
+        },
+        "accept": {
+          "fi": "näppäimet ja ohjain toimivat",
+          "en": "keyboard and pad work"
+        }
+      },
+      {
+        "name": {
+          "fi": "Kenttä",
+          "en": "Level"
+        },
+        "work": {
+          "fi": "rakenna turvallinen reitti",
+          "en": "build traversable route"
+        },
+        "accept": {
+          "fi": "kaikki huoneet saavutetaan",
+          "en": "all rooms reachable"
+        }
+      },
+      {
+        "name": {
+          "fi": "Tallennuspiste",
+          "en": "Save point"
+        },
+        "work": {
+          "fi": "tallenna pelaajan tila",
+          "en": "save player state"
+        },
+        "accept": {
+          "fi": "lataus palauttaa tavarat",
+          "en": "load restores inventory"
+        }
+      },
+      {
+        "name": {
+          "fi": "Palaute",
+          "en": "Feedback"
+        },
+        "work": {
+          "fi": "lisää ääni ja osumavihje",
+          "en": "add sound and hit cue"
+        },
+        "accept": {
+          "fi": "toiminto erottuu heti",
+          "en": "action is immediately clear"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_11",
+    "title": {
+      "fi": "Saavutettava verkkosivu",
+      "en": "Accessible website"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Rakenne",
+          "en": "Structure"
+        },
+        "work": {
+          "fi": "järjestä otsikkotasot",
+          "en": "order heading levels"
+        },
+        "accept": {
+          "fi": "yksi pääotsikko sivulla",
+          "en": "one main heading per page"
+        }
+      },
+      {
+        "name": {
+          "fi": "Näppäimistö",
+          "en": "Keyboard"
+        },
+        "work": {
+          "fi": "järjestä kohdistuspolku",
+          "en": "order focus navigation"
+        },
+        "accept": {
+          "fi": "kaikki toiminnot saatavilla",
+          "en": "all actions reachable"
+        }
+      },
+      {
+        "name": {
+          "fi": "Kontrasti",
+          "en": "Contrast"
+        },
+        "work": {
+          "fi": "säädä tekstien värit",
+          "en": "adjust text colors"
+        },
+        "accept": {
+          "fi": "kontrasti vähintään 4,5:1",
+          "en": "contrast at least 4.5:1"
+        }
+      },
+      {
+        "name": {
+          "fi": "Lomakkeet",
+          "en": "Forms"
+        },
+        "work": {
+          "fi": "nimeä kentät ja virheet",
+          "en": "label fields and errors"
+        },
+        "accept": {
+          "fi": "virhe luetaan ääneen",
+          "en": "error is announced"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_12",
+    "title": {
+      "fi": "Kahvilan avaaminen",
+      "en": "Opening a café"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Ruokalista",
+          "en": "Menu"
+        },
+        "work": {
+          "fi": "laske tuotteiden reseptit",
+          "en": "calculate product recipes"
+        },
+        "accept": {
+          "fi": "allergeenit merkitty",
+          "en": "allergens labeled"
+        }
+      },
+      {
+        "name": {
+          "fi": "Laitteet",
+          "en": "Equipment"
+        },
+        "work": {
+          "fi": "asenna kahvimylly",
+          "en": "install coffee grinder"
+        },
+        "accept": {
+          "fi": "annos toistuu 0,2 g sisällä",
+          "en": "dose repeats within 0.2 g"
+        }
+      },
+      {
+        "name": {
+          "fi": "Palvelutiski",
+          "en": "Service counter"
+        },
+        "work": {
+          "fi": "suunnittele tilausjono",
+          "en": "plan order queue"
+        },
+        "accept": {
+          "fi": "nouto ei tuki kassaa",
+          "en": "pickup does not block till"
+        }
+      },
+      {
+        "name": {
+          "fi": "Avauspäivä",
+          "en": "Opening day"
+        },
+        "work": {
+          "fi": "harjoittele aamuvuoro",
+          "en": "rehearse morning shift"
+        },
+        "accept": {
+          "fi": "tilaus ulos 4 minuutissa",
+          "en": "order served in 4 minutes"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_13",
+    "title": {
+      "fi": "Älykodin rakentaminen",
+      "en": "Smart home setup"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Valaistus",
+          "en": "Lighting"
+        },
+        "work": {
+          "fi": "ryhmittele huoneiden valot",
+          "en": "group lights by room"
+        },
+        "accept": {
+          "fi": "kytkin toimii verkotta",
+          "en": "switch works offline"
+        }
+      },
+      {
+        "name": {
+          "fi": "Lämpötila",
+          "en": "Temperature"
+        },
+        "work": {
+          "fi": "liitä huoneanturit",
+          "en": "connect room sensors"
+        },
+        "accept": {
+          "fi": "poikkeama alle 0,5 astetta",
+          "en": "error below 0.5 degrees"
+        }
+      },
+      {
+        "name": {
+          "fi": "Ovilukko",
+          "en": "Door lock"
+        },
+        "work": {
+          "fi": "luo vieraan määräaikakoodi",
+          "en": "create expiring guest code"
+        },
+        "accept": {
+          "fi": "koodi vanhenee ajallaan",
+          "en": "code expires on time"
+        }
+      },
+      {
+        "name": {
+          "fi": "Automaatiot",
+          "en": "Automations"
+        },
+        "work": {
+          "fi": "ajasta iltarutiini",
+          "en": "schedule evening routine"
+        },
+        "accept": {
+          "fi": "käsiohitus toimii",
+          "en": "manual override works"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_14",
+    "title": {
+      "fi": "Satelliitin prototyyppi",
+      "en": "Satellite prototype"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Rakenne",
+          "en": "Structure"
+        },
+        "work": {
+          "fi": "sovita moduulit kehikkoon",
+          "en": "fit modules to frame"
+        },
+        "accept": {
+          "fi": "massa budjetin sisällä",
+          "en": "mass within budget"
+        }
+      },
+      {
+        "name": {
+          "fi": "Virransyöttö",
+          "en": "Power supply"
+        },
+        "work": {
+          "fi": "kytke akku ja säädin",
+          "en": "connect battery and regulator"
+        },
+        "accept": {
+          "fi": "jännite pysyy vakaana",
+          "en": "voltage remains stable"
+        }
+      },
+      {
+        "name": {
+          "fi": "Radiolinkki",
+          "en": "Radio link"
+        },
+        "work": {
+          "fi": "paketoi telemetriakehys",
+          "en": "encode telemetry frame"
+        },
+        "accept": {
+          "fi": "tarkistussumma täsmää",
+          "en": "checksum matches"
+        }
+      },
+      {
+        "name": {
+          "fi": "Lämpökoe",
+          "en": "Thermal test"
+        },
+        "work": {
+          "fi": "aja kylmä-kuumajakso",
+          "en": "run cold-hot cycle"
+        },
+        "accept": {
+          "fi": "kaikki anturit vastaavat",
+          "en": "all sensors respond"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_15",
+    "title": {
+      "fi": "3D-tulostimen kokoaminen",
+      "en": "3D printer assembly"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Mekaniikka",
+          "en": "Mechanics"
+        },
+        "work": {
+          "fi": "suorista johteet ja hihnat",
+          "en": "align rails and belts"
+        },
+        "accept": {
+          "fi": "akselit kulkevat vapaasti",
+          "en": "axes move freely"
+        }
+      },
+      {
+        "name": {
+          "fi": "Kuuma pää",
+          "en": "Hot end"
+        },
+        "work": {
+          "fi": "kiinnitä lämmitin ja anturi",
+          "en": "fit heater and sensor"
+        },
+        "accept": {
+          "fi": "lämpötilasuoja katkaisee",
+          "en": "thermal cutoff works"
+        }
+      },
+      {
+        "name": {
+          "fi": "Tulostusalusta",
+          "en": "Print bed"
+        },
+        "work": {
+          "fi": "tasaa alustan neljä kulmaa",
+          "en": "level four bed corners"
+        },
+        "accept": {
+          "fi": "ensikerros tarttuu tasan",
+          "en": "first layer sticks evenly"
+        }
+      },
+      {
+        "name": {
+          "fi": "Kalibrointi",
+          "en": "Calibration"
+        },
+        "work": {
+          "fi": "tulosta mittakuutio",
+          "en": "print calibration cube"
+        },
+        "accept": {
+          "fi": "20 mm ±0,2 mm",
+          "en": "20 mm within 0.2 mm"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_16",
+    "title": {
+      "fi": "Kirjastojärjestelmä",
+      "en": "Library system"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Aineistot",
+          "en": "Collection"
+        },
+        "work": {
+          "fi": "tuo ISBN ja hyllypaikat",
+          "en": "import ISBNs and shelf codes"
+        },
+        "accept": {
+          "fi": "nimeke löytyy haulla",
+          "en": "title found by search"
+        }
+      },
+      {
+        "name": {
+          "fi": "Lainaus",
+          "en": "Loans"
+        },
+        "work": {
+          "fi": "toteuta laina ja palautus",
+          "en": "implement loan and return"
+        },
+        "accept": {
+          "fi": "samaa nidettä ei lainata",
+          "en": "copy cannot be loaned twice"
+        }
+      },
+      {
+        "name": {
+          "fi": "Varaukset",
+          "en": "Reservations"
+        },
+        "work": {
+          "fi": "järjestä varausjono",
+          "en": "order reservation queue"
+        },
+        "accept": {
+          "fi": "vanhin pyyntö ensin",
+          "en": "oldest request first"
+        }
+      },
+      {
+        "name": {
+          "fi": "Muistutukset",
+          "en": "Reminders"
+        },
+        "work": {
+          "fi": "ajasta eräpäiväviestit",
+          "en": "schedule due-date messages"
+        },
+        "accept": {
+          "fi": "yksi viesti per laina",
+          "en": "one message per loan"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_17",
+    "title": {
+      "fi": "Reittisuunnittelija",
+      "en": "Route planner"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Kartta",
+          "en": "Map"
+        },
+        "work": {
+          "fi": "lue katuverkko",
+          "en": "read street network"
+        },
+        "accept": {
+          "fi": "yksisuuntaisuus säilyy",
+          "en": "one-way rules preserved"
+        }
+      },
+      {
+        "name": {
+          "fi": "Reittihaku",
+          "en": "Routing"
+        },
+        "work": {
+          "fi": "laske lyhin kulkuaika",
+          "en": "compute shortest travel time"
+        },
+        "accept": {
+          "fi": "suljettu tie ohitetaan",
+          "en": "closed road avoided"
+        }
+      },
+      {
+        "name": {
+          "fi": "Vaihdot",
+          "en": "Transfers"
+        },
+        "work": {
+          "fi": "sovita bussien aikataulut",
+          "en": "match bus timetables"
+        },
+        "accept": {
+          "fi": "vaihtoaikaa vähintään 3 min",
+          "en": "transfer at least 3 minutes"
+        }
+      },
+      {
+        "name": {
+          "fi": "Näyttö",
+          "en": "Display"
+        },
+        "work": {
+          "fi": "piirrä kulkuohjeet",
+          "en": "draw route instructions"
+        },
+        "accept": {
+          "fi": "seuraava käännös näkyy",
+          "en": "next turn visible"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_18",
+    "title": {
+      "fi": "Sääaseman rakentaminen",
+      "en": "Weather station build"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Anturipaketti",
+          "en": "Sensor package"
+        },
+        "work": {
+          "fi": "kytke sade ja lämpöanturit",
+          "en": "connect rain and temp sensors"
+        },
+        "accept": {
+          "fi": "arvot yksiköineen oikein",
+          "en": "values and units correct"
+        }
+      },
+      {
+        "name": {
+          "fi": "Kotelo",
+          "en": "Enclosure"
+        },
+        "work": {
+          "fi": "tiivistä johtojen läpiviennit",
+          "en": "seal cable entries"
+        },
+        "accept": {
+          "fi": "suihkutesti ei vuoda",
+          "en": "spray test has no leak"
+        }
+      },
+      {
+        "name": {
+          "fi": "Tiedonkeruu",
+          "en": "Data collection"
+        },
+        "work": {
+          "fi": "kirjaa näyte minuutin välein",
+          "en": "log one sample per minute"
+        },
+        "accept": {
+          "fi": "katko ei riko lokia",
+          "en": "outage does not break log"
+        }
+      },
+      {
+        "name": {
+          "fi": "Kojelauta",
+          "en": "Dashboard"
+        },
+        "work": {
+          "fi": "piirrä vuorokausikuvaaja",
+          "en": "plot daily chart"
+        },
+        "accept": {
+          "fi": "puuttuva arvo näkyy aukkona",
+          "en": "missing value shows as gap"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_19",
+    "title": {
+      "fi": "Verkkopelin palvelin",
+      "en": "Multiplayer server"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Istunnot",
+          "en": "Sessions"
+        },
+        "work": {
+          "fi": "avaa pelihuoneen liittyminen",
+          "en": "open game-room joining"
+        },
+        "accept": {
+          "fi": "täysi huone torjuu liittyjän",
+          "en": "full room rejects join"
+        }
+      },
+      {
+        "name": {
+          "fi": "Synkronointi",
+          "en": "Synchronization"
+        },
+        "work": {
+          "fi": "lähetä sijaintipäivitykset",
+          "en": "send position updates"
+        },
+        "accept": {
+          "fi": "viive ei monista hahmoja",
+          "en": "lag does not clone players"
+        }
+      },
+      {
+        "name": {
+          "fi": "Suojaus",
+          "en": "Validation"
+        },
+        "work": {
+          "fi": "tarkista asiakkaan komennot",
+          "en": "validate client commands"
+        },
+        "accept": {
+          "fi": "mahdoton nopeus torjutaan",
+          "en": "impossible speed rejected"
+        }
+      },
+      {
+        "name": {
+          "fi": "Palautuminen",
+          "en": "Recovery"
+        },
+        "work": {
+          "fi": "tue yhteyden paluuta",
+          "en": "support reconnection"
+        },
+        "accept": {
+          "fi": "pelaajan tila palautuu",
+          "en": "player state restored"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_20",
+    "title": {
+      "fi": "Toimiston muutto",
+      "en": "Office relocation"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Inventaario",
+          "en": "Inventory"
+        },
+        "work": {
+          "fi": "numeroi laitteet ja laatikot",
+          "en": "number devices and boxes"
+        },
+        "accept": {
+          "fi": "jokaisella tavaralla paikka",
+          "en": "every item has destination"
+        }
+      },
+      {
+        "name": {
+          "fi": "Verkot",
+          "en": "Networking"
+        },
+        "work": {
+          "fi": "merkitse työpisteportit",
+          "en": "label workstation ports"
+        },
+        "accept": {
+          "fi": "yhteys jokaisella pöydällä",
+          "en": "connection at every desk"
+        }
+      },
+      {
+        "name": {
+          "fi": "Kuljetus",
+          "en": "Transport"
+        },
+        "work": {
+          "fi": "aikatauluta muuttoauto",
+          "en": "schedule moving van"
+        },
+        "accept": {
+          "fi": "ovet ja hissit varattu",
+          "en": "doors and lifts reserved"
+        }
+      },
+      {
+        "name": {
+          "fi": "Käyttöönotto",
+          "en": "Move-in"
+        },
+        "work": {
+          "fi": "kytke työpisteet valmiiksi",
+          "en": "connect workstations"
+        },
+        "accept": {
+          "fi": "näyttö ja verkko toimivat",
+          "en": "display and network work"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_21",
+    "title": {
+      "fi": "Avoimen lähdekoodin julkaisu",
+      "en": "Open source release"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Lisenssi",
+          "en": "License"
+        },
+        "work": {
+          "fi": "tarkista tiedostojen lisenssit",
+          "en": "check file licenses"
+        },
+        "accept": {
+          "fi": "riippuvuudet luetteloitu",
+          "en": "dependencies listed"
+        }
+      },
+      {
+        "name": {
+          "fi": "Dokumentaatio",
+          "en": "Documentation"
+        },
+        "work": {
+          "fi": "kirjoita asennusesimerkki",
+          "en": "write installation example"
+        },
+        "accept": {
+          "fi": "uusi käyttäjä pääsee alkuun",
+          "en": "new user can get started"
+        }
+      },
+      {
+        "name": {
+          "fi": "Paketointi",
+          "en": "Packaging"
+        },
+        "work": {
+          "fi": "rakenna lähdekoodiarkisto",
+          "en": "build source archive"
+        },
+        "accept": {
+          "fi": "arkisto sisältää lisenssin",
+          "en": "archive includes license"
+        }
+      },
+      {
+        "name": {
+          "fi": "Julkaisutesti",
+          "en": "Release test"
+        },
+        "work": {
+          "fi": "kokeile tyhjässä ympäristössä",
+          "en": "try in clean environment"
+        },
+        "accept": {
+          "fi": "ohjeen komennot toimivat",
+          "en": "documented commands work"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_22",
+    "title": {
+      "fi": "Videoeditointiputki",
+      "en": "Video editing pipeline"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Materiaali",
+          "en": "Footage"
+        },
+        "work": {
+          "fi": "järjestä kamerat ja otot",
+          "en": "organize cameras and takes"
+        },
+        "accept": {
+          "fi": "kaikki ääniraidat mukana",
+          "en": "all audio tracks included"
+        }
+      },
+      {
+        "name": {
+          "fi": "Leikkaus",
+          "en": "Editing"
+        },
+        "work": {
+          "fi": "rakenna kohtausjärjestys",
+          "en": "build scene sequence"
+        },
+        "accept": {
+          "fi": "jatkuvuus säilyy",
+          "en": "continuity preserved"
+        }
+      },
+      {
+        "name": {
+          "fi": "Ääni",
+          "en": "Audio"
+        },
+        "work": {
+          "fi": "tasaa dialogin voimakkuus",
+          "en": "balance dialogue volume"
+        },
+        "accept": {
+          "fi": "puhe ei leikkaa",
+          "en": "speech does not clip"
+        }
+      },
+      {
+        "name": {
+          "fi": "Vienti",
+          "en": "Export"
+        },
+        "work": {
+          "fi": "tuota tekstityksellinen video",
+          "en": "export video with captions"
+        },
+        "accept": {
+          "fi": "ääni ja teksti synkassa",
+          "en": "audio and captions aligned"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_23",
+    "title": {
+      "fi": "Podcastin tuotanto",
+      "en": "Podcast production"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Käsikirjoitus",
+          "en": "Script"
+        },
+        "work": {
+          "fi": "laadi haastattelukysymykset",
+          "en": "write interview questions"
+        },
+        "accept": {
+          "fi": "kesto noin 30 minuuttia",
+          "en": "duration about 30 minutes"
+        }
+      },
+      {
+        "name": {
+          "fi": "Nauhoitus",
+          "en": "Recording"
+        },
+        "work": {
+          "fi": "tallenna erilliset raidat",
+          "en": "record separate tracks"
+        },
+        "accept": {
+          "fi": "varatallenne olemassa",
+          "en": "backup recording exists"
+        }
+      },
+      {
+        "name": {
+          "fi": "Jälkityö",
+          "en": "Post-production"
+        },
+        "work": {
+          "fi": "poista häiriöt ja tauot",
+          "en": "remove noise and pauses"
+        },
+        "accept": {
+          "fi": "puhe pysyy luonnollisena",
+          "en": "speech remains natural"
+        }
+      },
+      {
+        "name": {
+          "fi": "Jakelu",
+          "en": "Distribution"
+        },
+        "work": {
+          "fi": "päivitä RSS-syöte",
+          "en": "update RSS feed"
+        },
+        "accept": {
+          "fi": "jakso löytyy soittimesta",
+          "en": "episode appears in player"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_24",
+    "title": {
+      "fi": "Vihannestarhan perustaminen",
+      "en": "Vegetable garden"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Maaperä",
+          "en": "Soil"
+        },
+        "work": {
+          "fi": "mittaa pH ja lisää komposti",
+          "en": "measure pH and add compost"
+        },
+        "accept": {
+          "fi": "pH kasvialueella sopiva",
+          "en": "pH suitable for crops"
+        }
+      },
+      {
+        "name": {
+          "fi": "Kylvö",
+          "en": "Sowing"
+        },
+        "work": {
+          "fi": "merkitse rivit ja kylvöpäivä",
+          "en": "mark rows and sowing date"
+        },
+        "accept": {
+          "fi": "siemenvälit ohjeen mukaan",
+          "en": "seed spacing per packet"
+        }
+      },
+      {
+        "name": {
+          "fi": "Kastelu",
+          "en": "Irrigation"
+        },
+        "work": {
+          "fi": "asenna tihkuletku",
+          "en": "install drip hose"
+        },
+        "accept": {
+          "fi": "kaikki rivit saavat vettä",
+          "en": "all rows receive water"
+        }
+      },
+      {
+        "name": {
+          "fi": "Sadonkorjuu",
+          "en": "Harvest"
+        },
+        "work": {
+          "fi": "kirjaa kypsymisajat",
+          "en": "record ripening dates"
+        },
+        "accept": {
+          "fi": "sato punnittu lajikkeittain",
+          "en": "harvest weighed by variety"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_25",
+    "title": {
+      "fi": "Sähköpotkulaudan prototyyppi",
+      "en": "Electric scooter prototype"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Akusto",
+          "en": "Battery pack"
+        },
+        "work": {
+          "fi": "kiinnitä suojattu akkumoduuli",
+          "en": "mount protected battery"
+        },
+        "accept": {
+          "fi": "kennot pysyvät rajoissa",
+          "en": "cells stay within limits"
+        }
+      },
+      {
+        "name": {
+          "fi": "Moottori",
+          "en": "Motor"
+        },
+        "work": {
+          "fi": "asenna napamoottori",
+          "en": "fit hub motor"
+        },
+        "accept": {
+          "fi": "pyörä pyörii kitkatta",
+          "en": "wheel turns without drag"
+        }
+      },
+      {
+        "name": {
+          "fi": "Ohjaustanko",
+          "en": "Handlebar"
+        },
+        "work": {
+          "fi": "kiristä taittomekanismi",
+          "en": "tighten folding mechanism"
+        },
+        "accept": {
+          "fi": "lukko ei aukea ravistamalla",
+          "en": "lock resists shaking"
+        }
+      },
+      {
+        "name": {
+          "fi": "Jarrutus",
+          "en": "Braking"
+        },
+        "work": {
+          "fi": "säädä mekaaninen jarru",
+          "en": "adjust mechanical brake"
+        },
+        "accept": {
+          "fi": "pysähtyy testialueella",
+          "en": "stops within test zone"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_26",
+    "title": {
+      "fi": "Reseptisovellus",
+      "en": "Recipe app"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Reseptikortti",
+          "en": "Recipe card"
+        },
+        "work": {
+          "fi": "tallenna ainekset ja vaiheet",
+          "en": "store ingredients and steps"
+        },
+        "accept": {
+          "fi": "määrät ja yksiköt mukana",
+          "en": "quantities and units stored"
+        }
+      },
+      {
+        "name": {
+          "fi": "Annoslaskuri",
+          "en": "Portion calculator"
+        },
+        "work": {
+          "fi": "skaalaa ainekset henkilöille",
+          "en": "scale ingredients to guests"
+        },
+        "accept": {
+          "fi": "puolikas annos lasketaan",
+          "en": "half portion computed"
+        }
+      },
+      {
+        "name": {
+          "fi": "Ostoslista",
+          "en": "Shopping list"
+        },
+        "work": {
+          "fi": "yhdistä samat ainekset",
+          "en": "merge matching ingredients"
+        },
+        "accept": {
+          "fi": "yksiköt eivät sekoitu",
+          "en": "units do not mix"
+        }
+      },
+      {
+        "name": {
+          "fi": "Hakusuodatin",
+          "en": "Search filter"
+        },
+        "work": {
+          "fi": "lisää allergeenien rajaus",
+          "en": "add allergen exclusions"
+        },
+        "accept": {
+          "fi": "poissuljettu ei näy tuloksissa",
+          "en": "excluded item not returned"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_27",
+    "title": {
+      "fi": "Henkilöstön perehdytys",
+      "en": "Employee onboarding"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Aloituspaketti",
+          "en": "Welcome pack"
+        },
+        "work": {
+          "fi": "kokoa tunnukset ja ohjeet",
+          "en": "prepare accounts and guides"
+        },
+        "accept": {
+          "fi": "oikeudet roolin mukaan",
+          "en": "role-based access only"
+        }
+      },
+      {
+        "name": {
+          "fi": "Työpiste",
+          "en": "Workstation"
+        },
+        "work": {
+          "fi": "asenna kehitystyökalut",
+          "en": "install development tools"
+        },
+        "accept": {
+          "fi": "esimerkkiprojekti käynnistyy",
+          "en": "sample project starts"
+        }
+      },
+      {
+        "name": {
+          "fi": "Mentorointi",
+          "en": "Mentoring"
+        },
+        "work": {
+          "fi": "sovi ensimmäiset tapaamiset",
+          "en": "book first mentor meetings"
+        },
+        "accept": {
+          "fi": "nimetty tukihenkilö",
+          "en": "named support person"
+        }
+      },
+      {
+        "name": {
+          "fi": "Ensimmäinen muutos",
+          "en": "First contribution"
+        },
+        "work": {
+          "fi": "rajaa pieni korjaustehtävä",
+          "en": "scope a small fix"
+        },
+        "accept": {
+          "fi": "vertaisarvio saatu",
+          "en": "peer review received"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_28",
+    "title": {
+      "fi": "Pakkauslinjan automatisointi",
+      "en": "Packaging automation"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Syöttö",
+          "en": "Feeding"
+        },
+        "work": {
+          "fi": "säädä kuljettimen nopeus",
+          "en": "tune conveyor speed"
+        },
+        "accept": {
+          "fi": "tuotteiden väli tasainen",
+          "en": "even product spacing"
+        }
+      },
+      {
+        "name": {
+          "fi": "Tunnistus",
+          "en": "Detection"
+        },
+        "work": {
+          "fi": "kohdista valokenno",
+          "en": "align photoelectric sensor"
+        },
+        "accept": {
+          "fi": "yksi havainto per tuote",
+          "en": "one detection per product"
+        }
+      },
+      {
+        "name": {
+          "fi": "Pakkaus",
+          "en": "Packing"
+        },
+        "work": {
+          "fi": "ohjaa laatikon sulkeminen",
+          "en": "control box closing"
+        },
+        "accept": {
+          "fi": "läppä ei jää auki",
+          "en": "flap never left open"
+        }
+      },
+      {
+        "name": {
+          "fi": "Poistokaista",
+          "en": "Reject lane"
+        },
+        "work": {
+          "fi": "ohjaa virhepaketit sivuun",
+          "en": "divert faulty packages"
+        },
+        "accept": {
+          "fi": "hyvä tuote ei poistu",
+          "en": "good product not rejected"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_29",
+    "title": {
+      "fi": "Kodin energiaseuranta",
+      "en": "Home energy tracking"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Mittariluku",
+          "en": "Meter reading"
+        },
+        "work": {
+          "fi": "lue pulssianturin arvo",
+          "en": "read pulse sensor value"
+        },
+        "accept": {
+          "fi": "kWh-kertymä täsmää",
+          "en": "kWh accumulation matches"
+        }
+      },
+      {
+        "name": {
+          "fi": "Hintatieto",
+          "en": "Price data"
+        },
+        "work": {
+          "fi": "tuo tuntihinnat",
+          "en": "import hourly prices"
+        },
+        "accept": {
+          "fi": "aikavyöhyke oikein",
+          "en": "timezone correct"
+        }
+      },
+      {
+        "name": {
+          "fi": "Kulutusnäkymä",
+          "en": "Usage view"
+        },
+        "work": {
+          "fi": "erittele päivä ja kuukausi",
+          "en": "split daily and monthly use"
+        },
+        "accept": {
+          "fi": "jaksojen summat täsmäävät",
+          "en": "period totals match"
+        }
+      },
+      {
+        "name": {
+          "fi": "Hälytys",
+          "en": "Alert"
+        },
+        "work": {
+          "fi": "ilmoita poikkeava kulutus",
+          "en": "notify unusual consumption"
+        },
+        "accept": {
+          "fi": "yksi hälytys per poikkeama",
+          "en": "one alert per anomaly"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_30",
+    "title": {
+      "fi": "Museon näyttely",
+      "en": "Museum exhibition"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Kokoelma",
+          "en": "Collection"
+        },
+        "work": {
+          "fi": "valitse esineet ja tarinat",
+          "en": "select objects and stories"
+        },
+        "accept": {
+          "fi": "lainasopimukset kunnossa",
+          "en": "loan agreements ready"
+        }
+      },
+      {
+        "name": {
+          "fi": "Tilasuunnitelma",
+          "en": "Floor plan"
+        },
+        "work": {
+          "fi": "sijoita vitriinit ja reitit",
+          "en": "place cases and routes"
+        },
+        "accept": {
+          "fi": "kulkuväli 1,2 metriä",
+          "en": "aisle width 1.2 meters"
+        }
+      },
+      {
+        "name": {
+          "fi": "Opasteet",
+          "en": "Signage"
+        },
+        "work": {
+          "fi": "kirjoita lyhyet kuvaukset",
+          "en": "write short descriptions"
+        },
+        "accept": {
+          "fi": "teksti kahdella kielellä",
+          "en": "text in two languages"
+        }
+      },
+      {
+        "name": {
+          "fi": "Avajaiset",
+          "en": "Opening"
+        },
+        "work": {
+          "fi": "harjoittele opastuskierros",
+          "en": "rehearse guided tour"
+        },
+        "accept": {
+          "fi": "kierros mahtuu 45 minuuttiin",
+          "en": "tour fits in 45 minutes"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_31",
+    "title": {
+      "fi": "Virtuaalitodellisuuskoulutus",
+      "en": "VR training"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Harjoitustila",
+          "en": "Training space"
+        },
+        "work": {
+          "fi": "mallinna turvallinen huone",
+          "en": "model a safe room"
+        },
+        "accept": {
+          "fi": "rajat näkyvät ajoissa",
+          "en": "boundaries visible early"
+        }
+      },
+      {
+        "name": {
+          "fi": "Tarttuminen",
+          "en": "Grabbing"
+        },
+        "work": {
+          "fi": "kohdista käsien otteet",
+          "en": "align hand grips"
+        },
+        "accept": {
+          "fi": "esine ei värise otteessa",
+          "en": "object stays steady in grip"
+        }
+      },
+      {
+        "name": {
+          "fi": "Tehtäväketju",
+          "en": "Task sequence"
+        },
+        "work": {
+          "fi": "järjestä harjoituksen vaiheet",
+          "en": "order training steps"
+        },
+        "accept": {
+          "fi": "väärä vaihe antaa vihjeen",
+          "en": "wrong step gives a hint"
+        }
+      },
+      {
+        "name": {
+          "fi": "Arviointi",
+          "en": "Assessment"
+        },
+        "work": {
+          "fi": "mittaa virheet ja aika",
+          "en": "measure errors and time"
+        },
+        "accept": {
+          "fi": "tulos vastaa tapahtumia",
+          "en": "score matches events"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_32",
+    "title": {
+      "fi": "Tiedostonjakopalvelu",
+      "en": "File sharing service"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Lataus",
+          "en": "Upload"
+        },
+        "work": {
+          "fi": "pilko suuret siirrot osiin",
+          "en": "split large transfers"
+        },
+        "accept": {
+          "fi": "keskeytys jatkuu osasta",
+          "en": "interruption resumes chunk"
+        }
+      },
+      {
+        "name": {
+          "fi": "Linkit",
+          "en": "Links"
+        },
+        "work": {
+          "fi": "luo vanheneva jakolinkki",
+          "en": "create expiring share link"
+        },
+        "accept": {
+          "fi": "vanha linkki ei avaudu",
+          "en": "expired link cannot open"
+        }
+      },
+      {
+        "name": {
+          "fi": "Tarkistus",
+          "en": "Integrity"
+        },
+        "work": {
+          "fi": "laske tiedoston tiiviste",
+          "en": "calculate file checksum"
+        },
+        "accept": {
+          "fi": "ladattu sisältö täsmää",
+          "en": "download matches source"
+        }
+      },
+      {
+        "name": {
+          "fi": "Poisto",
+          "en": "Deletion"
+        },
+        "work": {
+          "fi": "poista tiedosto ja linkit",
+          "en": "delete file and links"
+        },
+        "accept": {
+          "fi": "roskakori tyhjenee ajallaan",
+          "en": "trash expires on schedule"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_33",
+    "title": {
+      "fi": "Tekstieditorin rakentaminen",
+      "en": "Text editor build"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Muokkaus",
+          "en": "Editing"
+        },
+        "work": {
+          "fi": "toteuta kumoa ja tee uudelleen",
+          "en": "implement undo and redo"
+        },
+        "accept": {
+          "fi": "teksti palautuu täsmälleen",
+          "en": "text restored exactly"
+        }
+      },
+      {
+        "name": {
+          "fi": "Hakutoiminto",
+          "en": "Search"
+        },
+        "work": {
+          "fi": "korosta kaikki osumat",
+          "en": "highlight all matches"
+        },
+        "accept": {
+          "fi": "Unicode-haku toimii",
+          "en": "Unicode search works"
+        }
+      },
+      {
+        "name": {
+          "fi": "Tiedostot",
+          "en": "Files"
+        },
+        "work": {
+          "fi": "kirjoita väliaikaistiedostoon",
+          "en": "write via temporary file"
+        },
+        "accept": {
+          "fi": "katko säilyttää alkuperäisen",
+          "en": "failure preserves original"
+        }
+      },
+      {
+        "name": {
+          "fi": "Asetukset",
+          "en": "Preferences"
+        },
+        "work": {
+          "fi": "tallenna fontti ja riviväli",
+          "en": "save font and line spacing"
+        },
+        "accept": {
+          "fi": "asetukset säilyvät avauksessa",
+          "en": "preferences survive restart"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_34",
+    "title": {
+      "fi": "Käännösprojektin hallinta",
+      "en": "Translation project"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Sanasto",
+          "en": "Glossary"
+        },
+        "work": {
+          "fi": "sovi käyttöliittymän termit",
+          "en": "agree interface terminology"
+        },
+        "accept": {
+          "fi": "yksi termi per käsite",
+          "en": "one term per concept"
+        }
+      },
+      {
+        "name": {
+          "fi": "Merkkijonot",
+          "en": "Strings"
+        },
+        "work": {
+          "fi": "poimi käännettävät tekstit",
+          "en": "extract translatable strings"
+        },
+        "accept": {
+          "fi": "muuttujat säilyvät",
+          "en": "placeholders preserved"
+        }
+      },
+      {
+        "name": {
+          "fi": "Kielentarkistus",
+          "en": "Language review"
+        },
+        "work": {
+          "fi": "tarkista lauseet yhteydessä",
+          "en": "review strings in context"
+        },
+        "accept": {
+          "fi": "taivutukset oikein",
+          "en": "grammar is correct"
+        }
+      },
+      {
+        "name": {
+          "fi": "Ulkoasutesti",
+          "en": "Layout test"
+        },
+        "work": {
+          "fi": "kokeile pitkiä käännöksiä",
+          "en": "test long translations"
+        },
+        "accept": {
+          "fi": "painikkeet eivät leikkaannu",
+          "en": "buttons do not clip"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_35",
+    "title": {
+      "fi": "Lähiverkon uudistus",
+      "en": "Local network upgrade"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Kaapelointi",
+          "en": "Cabling"
+        },
+        "work": {
+          "fi": "mittaa ja merkitse vedot",
+          "en": "test and label cable runs"
+        },
+        "accept": {
+          "fi": "jokainen portti tunnistettu",
+          "en": "every port identified"
+        }
+      },
+      {
+        "name": {
+          "fi": "Kytkimet",
+          "en": "Switches"
+        },
+        "work": {
+          "fi": "määritä VLAN-verkot",
+          "en": "configure VLAN networks"
+        },
+        "accept": {
+          "fi": "vierasverkko eristetty",
+          "en": "guest network isolated"
+        }
+      },
+      {
+        "name": {
+          "fi": "Langaton verkko",
+          "en": "Wi-Fi"
+        },
+        "work": {
+          "fi": "kartoita tukiasemapaikat",
+          "en": "survey access-point locations"
+        },
+        "accept": {
+          "fi": "työpisteillä riittävä signaali",
+          "en": "desks have adequate signal"
+        }
+      },
+      {
+        "name": {
+          "fi": "Vaihto",
+          "en": "Cutover"
+        },
+        "work": {
+          "fi": "siirrä yhteydet huoltoikkunassa",
+          "en": "move links in service window"
+        },
+        "accept": {
+          "fi": "palautuspolku testattu",
+          "en": "rollback path tested"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_36",
+    "title": {
+      "fi": "Äänisyntetisaattori",
+      "en": "Audio synthesizer"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Oskillaattori",
+          "en": "Oscillator"
+        },
+        "work": {
+          "fi": "tuota sini ja sahalaita",
+          "en": "generate sine and saw waves"
+        },
+        "accept": {
+          "fi": "sävelkorkeus pitää vireen",
+          "en": "pitch stays in tune"
+        }
+      },
+      {
+        "name": {
+          "fi": "Suodin",
+          "en": "Filter"
+        },
+        "work": {
+          "fi": "lisää säädettävä alipäästö",
+          "en": "add adjustable low-pass"
+        },
+        "accept": {
+          "fi": "rajataajuus toimii",
+          "en": "cutoff control works"
+        }
+      },
+      {
+        "name": {
+          "fi": "Vaippa",
+          "en": "Envelope"
+        },
+        "work": {
+          "fi": "ohjaa ADSR-vaiheet",
+          "en": "control ADSR stages"
+        },
+        "accept": {
+          "fi": "vapautus ei napsu",
+          "en": "release has no click"
+        }
+      },
+      {
+        "name": {
+          "fi": "MIDI",
+          "en": "MIDI input"
+        },
+        "work": {
+          "fi": "käsittele nuotit ja velocity",
+          "en": "handle notes and velocity"
+        },
+        "accept": {
+          "fi": "note-off lopettaa äänen",
+          "en": "note-off ends the sound"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_37",
+    "title": {
+      "fi": "Valokuvagallerian julkaisu",
+      "en": "Photo gallery launch"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Kuvat",
+          "en": "Images"
+        },
+        "work": {
+          "fi": "luo eri kokoiset esikatselut",
+          "en": "generate preview sizes"
+        },
+        "accept": {
+          "fi": "alkuperäinen säilyy",
+          "en": "original preserved"
+        }
+      },
+      {
+        "name": {
+          "fi": "Metatiedot",
+          "en": "Metadata"
+        },
+        "work": {
+          "fi": "lue kuvauspäivä ja tekijä",
+          "en": "read date and creator"
+        },
+        "accept": {
+          "fi": "yksityinen sijainti piilossa",
+          "en": "private location hidden"
+        }
+      },
+      {
+        "name": {
+          "fi": "Galleria",
+          "en": "Gallery"
+        },
+        "work": {
+          "fi": "rakenna näppäimillä selaus",
+          "en": "add keyboard navigation"
+        },
+        "accept": {
+          "fi": "fokus seuraa kuvaa",
+          "en": "focus follows image"
+        }
+      },
+      {
+        "name": {
+          "fi": "Jakaminen",
+          "en": "Sharing"
+        },
+        "work": {
+          "fi": "luo albumin katselulinkki",
+          "en": "create album viewing link"
+        },
+        "accept": {
+          "fi": "vain valittu albumi näkyy",
+          "en": "only chosen album visible"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_38",
+    "title": {
+      "fi": "Varausjärjestelmä",
+      "en": "Booking system"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Kalenteri",
+          "en": "Calendar"
+        },
+        "work": {
+          "fi": "näytä tilojen vapaat ajat",
+          "en": "show room availability"
+        },
+        "accept": {
+          "fi": "päällekkäisyys estetty",
+          "en": "double booking prevented"
+        }
+      },
+      {
+        "name": {
+          "fi": "Varauksen luonti",
+          "en": "Create booking"
+        },
+        "work": {
+          "fi": "lukitse aika tapahtumassa",
+          "en": "lock slot in transaction"
+        },
+        "accept": {
+          "fi": "kaksi pyyntöä ei törmää",
+          "en": "two requests cannot collide"
+        }
+      },
+      {
+        "name": {
+          "fi": "Peruutus",
+          "en": "Cancellation"
+        },
+        "work": {
+          "fi": "vapauta varattu aikaväli",
+          "en": "release reserved time slot"
+        },
+        "accept": {
+          "fi": "paikka palautuu heti",
+          "en": "slot returns immediately"
+        }
+      },
+      {
+        "name": {
+          "fi": "Vahvistus",
+          "en": "Confirmation"
+        },
+        "work": {
+          "fi": "näytä aikavyöhyke viestissä",
+          "en": "show timezone in message"
+        },
+        "accept": {
+          "fi": "vastaanottaja näkee ajan",
+          "en": "recipient sees correct time"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_39",
+    "title": {
+      "fi": "Kaupunkidatan visualisointi",
+      "en": "City data visualization"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Aineisto",
+          "en": "Dataset"
+        },
+        "work": {
+          "fi": "lue julkinen tilastotiedosto",
+          "en": "read public statistics file"
+        },
+        "accept": {
+          "fi": "vuosi ja alue tunnistettu",
+          "en": "year and district identified"
+        }
+      },
+      {
+        "name": {
+          "fi": "Puhdistus",
+          "en": "Cleaning"
+        },
+        "work": {
+          "fi": "erota puuttuva ja nolla",
+          "en": "separate missing and zero"
+        },
+        "accept": {
+          "fi": "tyhjää ei lasketa nollaksi",
+          "en": "missing not counted as zero"
+        }
+      },
+      {
+        "name": {
+          "fi": "Karttataso",
+          "en": "Map layer"
+        },
+        "work": {
+          "fi": "liitä luvut aluerajoihin",
+          "en": "join values to boundaries"
+        },
+        "accept": {
+          "fi": "kaikki alueet täsmäävät",
+          "en": "all districts match"
+        }
+      },
+      {
+        "name": {
+          "fi": "Selite",
+          "en": "Legend"
+        },
+        "work": {
+          "fi": "merkitse asteikko ja lähde",
+          "en": "label scale and source"
+        },
+        "accept": {
+          "fi": "värit erottuvat kaikille",
+          "en": "colors distinguishable"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_40",
+    "title": {
+      "fi": "Dronen kokoaminen",
+      "en": "Drone assembly"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Lentokehikko",
+          "en": "Airframe"
+        },
+        "work": {
+          "fi": "kiinnitä varret ja moottorit",
+          "en": "mount arms and motors"
+        },
+        "accept": {
+          "fi": "potkurit pyörivät vapaasti",
+          "en": "propellers spin freely"
+        }
+      },
+      {
+        "name": {
+          "fi": "Lennonohjain",
+          "en": "Flight controller"
+        },
+        "work": {
+          "fi": "asenna vaimennettu ohjain",
+          "en": "mount damped controller"
+        },
+        "accept": {
+          "fi": "akselisuunnat oikein",
+          "en": "axis directions correct"
+        }
+      },
+      {
+        "name": {
+          "fi": "Radio-ohjaus",
+          "en": "Radio control"
+        },
+        "work": {
+          "fi": "parita vastaanotin",
+          "en": "pair receiver"
+        },
+        "accept": {
+          "fi": "signaalikatko sammuttaa",
+          "en": "signal loss disarms"
+        }
+      },
+      {
+        "name": {
+          "fi": "Maakoetus",
+          "en": "Ground test"
+        },
+        "work": {
+          "fi": "testaa ilman potkureita",
+          "en": "test without propellers"
+        },
+        "accept": {
+          "fi": "moottorijärjestys oikein",
+          "en": "motor order correct"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_41",
+    "title": {
+      "fi": "Kestävän pakkauksen suunnittelu",
+      "en": "Sustainable packaging"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Materiaali",
+          "en": "Material"
+        },
+        "work": {
+          "fi": "vertaa kierrätyskuituja",
+          "en": "compare recycled fibers"
+        },
+        "accept": {
+          "fi": "materiaali eroteltavissa",
+          "en": "material is separable"
+        }
+      },
+      {
+        "name": {
+          "fi": "Rakenne",
+          "en": "Structure"
+        },
+        "work": {
+          "fi": "taita suojaava sisäosa",
+          "en": "fold protective insert"
+        },
+        "accept": {
+          "fi": "tuote ei liiku laatikossa",
+          "en": "product stays still in box"
+        }
+      },
+      {
+        "name": {
+          "fi": "Kuljetustesti",
+          "en": "Transit test"
+        },
+        "work": {
+          "fi": "pudota testipakkaus",
+          "en": "drop test package"
+        },
+        "accept": {
+          "fi": "tuote säilyy ehjänä",
+          "en": "product stays intact"
+        }
+      },
+      {
+        "name": {
+          "fi": "Merkinnät",
+          "en": "Labels"
+        },
+        "work": {
+          "fi": "lisää lajitteluohje",
+          "en": "add sorting instructions"
+        },
+        "accept": {
+          "fi": "ohje vastaa materiaalia",
+          "en": "instructions match material"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_42",
+    "title": {
+      "fi": "Pikaviestinsovellus",
+      "en": "Messaging app"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Keskustelut",
+          "en": "Conversations"
+        },
+        "work": {
+          "fi": "luo yksityiset kanavat",
+          "en": "create private channels"
+        },
+        "accept": {
+          "fi": "vain jäsen näkee viestit",
+          "en": "only members see messages"
+        }
+      },
+      {
+        "name": {
+          "fi": "Viestijono",
+          "en": "Message queue"
+        },
+        "work": {
+          "fi": "järjestä lähetykset ID:llä",
+          "en": "order sends by ID"
+        },
+        "accept": {
+          "fi": "uudelleenyritys ei monista",
+          "en": "retry creates no duplicate"
+        }
+      },
+      {
+        "name": {
+          "fi": "Lukukuittaus",
+          "en": "Read receipts"
+        },
+        "work": {
+          "fi": "päivitä viimeksi luettu ID",
+          "en": "update last-read ID"
+        },
+        "accept": {
+          "fi": "tila ei siirry taaksepäin",
+          "en": "state never goes backward"
+        }
+      },
+      {
+        "name": {
+          "fi": "Hakuhistoria",
+          "en": "History search"
+        },
+        "work": {
+          "fi": "indeksoi sallitut viestit",
+          "en": "index permitted messages"
+        },
+        "accept": {
+          "fi": "poistettu viesti ei löydy",
+          "en": "deleted message not found"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_43",
+    "title": {
+      "fi": "Vapaaehtoisten koordinointi",
+      "en": "Volunteer coordination"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Tehtävät",
+          "en": "Assignments"
+        },
+        "work": {
+          "fi": "kirjaa vuoron vastuut",
+          "en": "list shift duties"
+        },
+        "accept": {
+          "fi": "jokaisella tehtävällä vetäjä",
+          "en": "each task has a lead"
+        }
+      },
+      {
+        "name": {
+          "fi": "Ilmoittautuminen",
+          "en": "Sign-up"
+        },
+        "work": {
+          "fi": "kerää vapaat ajankohdat",
+          "en": "collect availability"
+        },
+        "accept": {
+          "fi": "vuoroissa ei päällekkäin",
+          "en": "no overlapping shifts"
+        }
+      },
+      {
+        "name": {
+          "fi": "Perehdytys",
+          "en": "Briefing"
+        },
+        "work": {
+          "fi": "jaa paikan turvallisuusohje",
+          "en": "share venue safety guide"
+        },
+        "accept": {
+          "fi": "ohje kuitattu luetuksi",
+          "en": "guide acknowledged"
+        }
+      },
+      {
+        "name": {
+          "fi": "Viestintä",
+          "en": "Communication"
+        },
+        "work": {
+          "fi": "lähetä vuoromuistutus",
+          "en": "send shift reminder"
+        },
+        "accept": {
+          "fi": "muutos tavoittaa vastuullisen",
+          "en": "change reaches assignee"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_44",
+    "title": {
+      "fi": "Kotipalvelimen rakentaminen",
+      "en": "Home server build"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Laitteisto",
+          "en": "Hardware"
+        },
+        "work": {
+          "fi": "asenna muisti ja levyt",
+          "en": "install memory and drives"
+        },
+        "accept": {
+          "fi": "muistitesti virheetön",
+          "en": "memory test has no errors"
+        }
+      },
+      {
+        "name": {
+          "fi": "Tallennustila",
+          "en": "Storage"
+        },
+        "work": {
+          "fi": "luo peilattu levyryhmä",
+          "en": "create mirrored disk pool"
+        },
+        "accept": {
+          "fi": "levyvika havaitaan",
+          "en": "disk failure detected"
+        }
+      },
+      {
+        "name": {
+          "fi": "Palvelut",
+          "en": "Services"
+        },
+        "work": {
+          "fi": "eristä sovellusten oikeudet",
+          "en": "isolate service permissions"
+        },
+        "accept": {
+          "fi": "palvelu ei näe muiden dataa",
+          "en": "service cannot read others"
+        }
+      },
+      {
+        "name": {
+          "fi": "Etäkäyttö",
+          "en": "Remote access"
+        },
+        "work": {
+          "fi": "määritä salattu yhteys",
+          "en": "configure encrypted access"
+        },
+        "accept": {
+          "fi": "avaimen poisto estää pääsyn",
+          "en": "revoked key denies access"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_45",
+    "title": {
+      "fi": "Koulun oppimisympäristö",
+      "en": "School learning platform"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Kurssit",
+          "en": "Courses"
+        },
+        "work": {
+          "fi": "järjestä jaksot ja materiaalit",
+          "en": "organize modules and files"
+        },
+        "accept": {
+          "fi": "oppija näkee omat kurssit",
+          "en": "learner sees own courses"
+        }
+      },
+      {
+        "name": {
+          "fi": "Tehtävät",
+          "en": "Assignments"
+        },
+        "work": {
+          "fi": "lisää määräaika ja palautus",
+          "en": "add deadline and submission"
+        },
+        "accept": {
+          "fi": "palautuksesta jää kuitti",
+          "en": "submission has receipt"
+        }
+      },
+      {
+        "name": {
+          "fi": "Palaute",
+          "en": "Feedback"
+        },
+        "work": {
+          "fi": "liitä arvio palautukseen",
+          "en": "attach assessment to work"
+        },
+        "accept": {
+          "fi": "palaute näkyy oikealle oppijalle",
+          "en": "right learner sees feedback"
+        }
+      },
+      {
+        "name": {
+          "fi": "Edistyminen",
+          "en": "Progress"
+        },
+        "work": {
+          "fi": "laske suoritetut osiot",
+          "en": "count completed modules"
+        },
+        "accept": {
+          "fi": "osuus vastaa tehtäviä",
+          "en": "percentage matches work"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_46",
+    "title": {
+      "fi": "Vesiviljelyjärjestelmä",
+      "en": "Hydroponics system"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Säiliö",
+          "en": "Reservoir"
+        },
+        "work": {
+          "fi": "tiivistä säiliön liitokset",
+          "en": "seal reservoir fittings"
+        },
+        "accept": {
+          "fi": "vuorokauden koe ei vuoda",
+          "en": "24-hour test has no leak"
+        }
+      },
+      {
+        "name": {
+          "fi": "Kierto",
+          "en": "Circulation"
+        },
+        "work": {
+          "fi": "asenna pumppu ja paluuputki",
+          "en": "fit pump and return pipe"
+        },
+        "accept": {
+          "fi": "vesi kiertää joka kanavaan",
+          "en": "water reaches every channel"
+        }
+      },
+      {
+        "name": {
+          "fi": "Ravinnemittaus",
+          "en": "Nutrient sensing"
+        },
+        "work": {
+          "fi": "kalibroi EC- ja pH-anturit",
+          "en": "calibrate EC and pH sensors"
+        },
+        "accept": {
+          "fi": "vertailuliuos täsmää",
+          "en": "reference solution matches"
+        }
+      },
+      {
+        "name": {
+          "fi": "Kasvivalo",
+          "en": "Grow light"
+        },
+        "work": {
+          "fi": "säädä korkeus ja ajastus",
+          "en": "adjust height and timer"
+        },
+        "accept": {
+          "fi": "valojakso toteutuu",
+          "en": "light cycle is respected"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_47",
+    "title": {
+      "fi": "Animaatioelokuvan tuotanto",
+      "en": "Animated film production"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Kuvakäsikirjoitus",
+          "en": "Storyboard"
+        },
+        "work": {
+          "fi": "piirrä kohtauksen ruudut",
+          "en": "draw scene panels"
+        },
+        "accept": {
+          "fi": "toiminta ymmärrettävissä",
+          "en": "action is understandable"
+        }
+      },
+      {
+        "name": {
+          "fi": "Hahmorigi",
+          "en": "Character rig"
+        },
+        "work": {
+          "fi": "liitä luut ja ohjaimet",
+          "en": "connect bones and controls"
+        },
+        "accept": {
+          "fi": "nivel ei riko pintaa",
+          "en": "joint does not tear mesh"
+        }
+      },
+      {
+        "name": {
+          "fi": "Animaatio",
+          "en": "Animation"
+        },
+        "work": {
+          "fi": "ajoita avainasennot",
+          "en": "time key poses"
+        },
+        "accept": {
+          "fi": "jalat eivät liu'u",
+          "en": "feet do not slide"
+        }
+      },
+      {
+        "name": {
+          "fi": "Renderöinti",
+          "en": "Rendering"
+        },
+        "work": {
+          "fi": "jonota valmiit ruudut",
+          "en": "queue finished frames"
+        },
+        "accept": {
+          "fi": "ruutuja ei puutu",
+          "en": "no missing frames"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_48",
+    "title": {
+      "fi": "Varastonhallinta",
+      "en": "Warehouse management"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Tuotenimikkeet",
+          "en": "Stock items"
+        },
+        "work": {
+          "fi": "lisää viivakoodi ja yksikkö",
+          "en": "add barcode and unit"
+        },
+        "accept": {
+          "fi": "koodi yksilöi nimikkeen",
+          "en": "code uniquely identifies SKU"
+        }
+      },
+      {
+        "name": {
+          "fi": "Vastaanotto",
+          "en": "Receiving"
+        },
+        "work": {
+          "fi": "kirjaa saapuva erä",
+          "en": "record incoming batch"
+        },
+        "accept": {
+          "fi": "määrä täsmää lähetteeseen",
+          "en": "quantity matches delivery note"
+        }
+      },
+      {
+        "name": {
+          "fi": "Keräily",
+          "en": "Picking"
+        },
+        "work": {
+          "fi": "järjestä hyllyreitti",
+          "en": "order shelf route"
+        },
+        "accept": {
+          "fi": "jokainen rivi kuitattu",
+          "en": "every line confirmed"
+        }
+      },
+      {
+        "name": {
+          "fi": "Inventointi",
+          "en": "Stocktake"
+        },
+        "work": {
+          "fi": "laske hylly ja kirjaa ero",
+          "en": "count shelf and log variance"
+        },
+        "accept": {
+          "fi": "eroilla hyväksyjä",
+          "en": "variances have approver"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_49",
+    "title": {
+      "fi": "Käyttöliittymän design system",
+      "en": "Interface design system"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Värit ja typografia",
+          "en": "Color and type"
+        },
+        "work": {
+          "fi": "määritä semanttiset tyylit",
+          "en": "define semantic styles"
+        },
+        "accept": {
+          "fi": "teksti erottuu taustasta",
+          "en": "text contrasts background"
+        }
+      },
+      {
+        "name": {
+          "fi": "Komponentit",
+          "en": "Components"
+        },
+        "work": {
+          "fi": "rakenna napit ja kentät",
+          "en": "build buttons and fields"
+        },
+        "accept": {
+          "fi": "tilat kattavat virheet",
+          "en": "states cover errors"
+        }
+      },
+      {
+        "name": {
+          "fi": "Dokumentaatio",
+          "en": "Documentation"
+        },
+        "work": {
+          "fi": "näytä käytön esimerkit",
+          "en": "show usage examples"
+        },
+        "accept": {
+          "fi": "jokaisella osalla ohje",
+          "en": "every component documented"
+        }
+      },
+      {
+        "name": {
+          "fi": "Yhteensopivuus",
+          "en": "Compatibility"
+        },
+        "work": {
+          "fi": "kokeile kosketus ja näppäimet",
+          "en": "test touch and keyboard"
+        },
+        "accept": {
+          "fi": "sama toiminto saavutetaan",
+          "en": "same action reachable"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_50",
+    "title": {
+      "fi": "Maastorobotin navigointi",
+      "en": "Rover navigation"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Paikannus",
+          "en": "Localization"
+        },
+        "work": {
+          "fi": "yhdistä pyörät ja kompassi",
+          "en": "combine wheels and compass"
+        },
+        "accept": {
+          "fi": "paluu lähtöön alle 20 cm",
+          "en": "return error below 20 cm"
+        }
+      },
+      {
+        "name": {
+          "fi": "Esteväistö",
+          "en": "Obstacle avoidance"
+        },
+        "work": {
+          "fi": "luokittele esteiden etäisyys",
+          "en": "classify obstacle distance"
+        },
+        "accept": {
+          "fi": "robotti pysähtyy ennen estettä",
+          "en": "rover stops before obstacle"
+        }
+      },
+      {
+        "name": {
+          "fi": "Reittipisteet",
+          "en": "Waypoints"
+        },
+        "work": {
+          "fi": "tallenna tavoitepisteet",
+          "en": "store target waypoints"
+        },
+        "accept": {
+          "fi": "pisteet kuljetaan järjestyksessä",
+          "en": "points visited in order"
+        }
+      },
+      {
+        "name": {
+          "fi": "Etävalvonta",
+          "en": "Remote monitoring"
+        },
+        "work": {
+          "fi": "näytä akku ja sijainti",
+          "en": "show battery and position"
+        },
+        "accept": {
+          "fi": "katko merkitään näkyvästi",
+          "en": "dropout clearly indicated"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_51",
+    "title": {
+      "fi": "Yhteisöpuutarhan rakentaminen",
+      "en": "Community garden build"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Palstajako",
+          "en": "Plot allocation"
+        },
+        "work": {
+          "fi": "numeroi viljelylaatikot",
+          "en": "number growing beds"
+        },
+        "accept": {
+          "fi": "jokaisella palstalla hoitaja",
+          "en": "every plot has caretaker"
+        }
+      },
+      {
+        "name": {
+          "fi": "Työkaluvaja",
+          "en": "Tool shed"
+        },
+        "work": {
+          "fi": "järjestä yhteiset työkalut",
+          "en": "organize shared tools"
+        },
+        "accept": {
+          "fi": "lainat merkitään listaan",
+          "en": "loans logged in register"
+        }
+      },
+      {
+        "name": {
+          "fi": "Vesipiste",
+          "en": "Water point"
+        },
+        "work": {
+          "fi": "asenna suljettava hana",
+          "en": "install shutoff tap"
+        },
+        "accept": {
+          "fi": "vesi ei jää vuotamaan",
+          "en": "water does not keep leaking"
+        }
+      },
+      {
+        "name": {
+          "fi": "Talkoot",
+          "en": "Work parties"
+        },
+        "work": {
+          "fi": "jaa yhteiset huoltovuorot",
+          "en": "assign maintenance shifts"
+        },
+        "accept": {
+          "fi": "kaikilla viikoilla vastuuhenkilö",
+          "en": "each week has an owner"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_52",
+    "title": {
+      "fi": "Lokipalvelun rakentaminen",
+      "en": "Logging service build"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Keräin",
+          "en": "Collector"
+        },
+        "work": {
+          "fi": "vastaanota jäsennellyt lokit",
+          "en": "receive structured logs"
+        },
+        "accept": {
+          "fi": "virheellinen rivi erotellaan",
+          "en": "invalid line separated"
+        }
+      },
+      {
+        "name": {
+          "fi": "Tietosuoja",
+          "en": "Privacy"
+        },
+        "work": {
+          "fi": "peitä salaisuudet kentistä",
+          "en": "redact secrets from fields"
+        },
+        "accept": {
+          "fi": "tunnusavain ei tallennu",
+          "en": "access key never stored"
+        }
+      },
+      {
+        "name": {
+          "fi": "Haku",
+          "en": "Search"
+        },
+        "work": {
+          "fi": "indeksoi aika ja palvelu",
+          "en": "index time and service"
+        },
+        "accept": {
+          "fi": "aikarajaus on tarkka",
+          "en": "time filtering is precise"
+        }
+      },
+      {
+        "name": {
+          "fi": "Säilytys",
+          "en": "Retention"
+        },
+        "work": {
+          "fi": "poista vanhentuneet erät",
+          "en": "delete expired batches"
+        },
+        "accept": {
+          "fi": "ikäraja toteutuu",
+          "en": "retention limit enforced"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_53",
+    "title": {
+      "fi": "Interaktiivinen opaskartta",
+      "en": "Interactive visitor map"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Pohjakuva",
+          "en": "Floor plan"
+        },
+        "work": {
+          "fi": "piirrä kerrokset mittakaavaan",
+          "en": "draw floors to scale"
+        },
+        "accept": {
+          "fi": "huoneet oikeilla paikoilla",
+          "en": "rooms in correct positions"
+        }
+      },
+      {
+        "name": {
+          "fi": "Kohteet",
+          "en": "Destinations"
+        },
+        "work": {
+          "fi": "nimeä huoneet kahdella kielellä",
+          "en": "name rooms in two languages"
+        },
+        "accept": {
+          "fi": "nimet vastaavat opasteita",
+          "en": "names match signs"
+        }
+      },
+      {
+        "name": {
+          "fi": "Esteetön reitti",
+          "en": "Accessible route"
+        },
+        "work": {
+          "fi": "merkitse hissit ja luiskat",
+          "en": "mark lifts and ramps"
+        },
+        "accept": {
+          "fi": "reitti välttää portaat",
+          "en": "route avoids stairs"
+        }
+      },
+      {
+        "name": {
+          "fi": "Paikannus",
+          "en": "You are here"
+        },
+        "work": {
+          "fi": "näytä nykyinen sisäänkäynti",
+          "en": "show current entrance"
+        },
+        "accept": {
+          "fi": "kartta suuntautuu oikein",
+          "en": "map orientation is correct"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_54",
+    "title": {
+      "fi": "Tietoturvan harjoitusympäristö",
+      "en": "Security training lab"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Eristys",
+          "en": "Isolation"
+        },
+        "work": {
+          "fi": "rakenna suljettu harjoitusverkko",
+          "en": "build isolated training net"
+        },
+        "accept": {
+          "fi": "ei reittiä tuotantoon",
+          "en": "no route to production"
+        }
+      },
+      {
+        "name": {
+          "fi": "Harjoitukset",
+          "en": "Exercises"
+        },
+        "work": {
+          "fi": "laadi kirjautumisen auditointi",
+          "en": "prepare sign-in audit"
+        },
+        "accept": {
+          "fi": "testitili rajattu ympäristöön",
+          "en": "test account confined to lab"
+        }
+      },
+      {
+        "name": {
+          "fi": "Havainnointi",
+          "en": "Observation"
+        },
+        "work": {
+          "fi": "kerää harjoituksen lokit",
+          "en": "collect exercise logs"
+        },
+        "accept": {
+          "fi": "aikaleimat synkronoitu",
+          "en": "timestamps synchronized"
+        }
+      },
+      {
+        "name": {
+          "fi": "Palautus",
+          "en": "Reset"
+        },
+        "work": {
+          "fi": "palauta puhdas tilannekuva",
+          "en": "restore clean snapshot"
+        },
+        "accept": {
+          "fi": "uusi harjoitus alkaa tyhjästä",
+          "en": "new exercise starts clean"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_55",
+    "title": {
+      "fi": "Varaosien verkkoluettelo",
+      "en": "Spare parts catalog"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Osatiedot",
+          "en": "Part records"
+        },
+        "work": {
+          "fi": "tallenna osa ja mitat",
+          "en": "store part and dimensions"
+        },
+        "accept": {
+          "fi": "yksikkö jokaisella mitalla",
+          "en": "every dimension has unit"
+        }
+      },
+      {
+        "name": {
+          "fi": "Yhteensopivuus",
+          "en": "Compatibility"
+        },
+        "work": {
+          "fi": "liitä mallit ja vuosiversiot",
+          "en": "link models and model years"
+        },
+        "accept": {
+          "fi": "väärä malli ei saa osumaa",
+          "en": "wrong model has no match"
+        }
+      },
+      {
+        "name": {
+          "fi": "Räjäytyskuva",
+          "en": "Exploded view"
+        },
+        "work": {
+          "fi": "numeroi kuvan osat",
+          "en": "number illustrated parts"
+        },
+        "accept": {
+          "fi": "numero avaa oikean osan",
+          "en": "number opens correct part"
+        }
+      },
+      {
+        "name": {
+          "fi": "Saatavuus",
+          "en": "Availability"
+        },
+        "work": {
+          "fi": "liitä varaston saldot",
+          "en": "connect stock quantities"
+        },
+        "accept": {
+          "fi": "vanha tieto merkitty",
+          "en": "stale data marked"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_56",
+    "title": {
+      "fi": "Virtuaalinen näyttelytila",
+      "en": "Virtual showroom"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Tilamalli",
+          "en": "Room model"
+        },
+        "work": {
+          "fi": "rakenna seinät ja kulkureitit",
+          "en": "build walls and walkways"
+        },
+        "accept": {
+          "fi": "vierailija ei putoa lattian läpi",
+          "en": "visitor cannot fall through"
+        }
+      },
+      {
+        "name": {
+          "fi": "Tuote-esittely",
+          "en": "Product display"
+        },
+        "work": {
+          "fi": "lisää pyöriteltävät esineet",
+          "en": "add rotatable objects"
+        },
+        "accept": {
+          "fi": "esine palautuu alkuasentoon",
+          "en": "object resets orientation"
+        }
+      },
+      {
+        "name": {
+          "fi": "Tietokyltit",
+          "en": "Information labels"
+        },
+        "work": {
+          "fi": "kiinnitä kuvaus tuotteen viereen",
+          "en": "place caption beside product"
+        },
+        "accept": {
+          "fi": "teksti luettavissa lähellä",
+          "en": "text readable nearby"
+        }
+      },
+      {
+        "name": {
+          "fi": "Ohjaus",
+          "en": "Navigation"
+        },
+        "work": {
+          "fi": "tue näppäimistöä ja ohjainta",
+          "en": "support keyboard and gamepad"
+        },
+        "accept": {
+          "fi": "kaikki näyttelykohteet saavutetaan",
+          "en": "all exhibits reachable"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_57",
+    "title": {
+      "fi": "Koneoppimisen aineistotyö",
+      "en": "Machine learning data work"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Keruu",
+          "en": "Collection"
+        },
+        "work": {
+          "fi": "kirjaa aineiston alkuperä",
+          "en": "record dataset provenance"
+        },
+        "accept": {
+          "fi": "käyttölupa dokumentoitu",
+          "en": "usage permission documented"
+        }
+      },
+      {
+        "name": {
+          "fi": "Merkintä",
+          "en": "Annotation"
+        },
+        "work": {
+          "fi": "ohjeista luokkien rajat",
+          "en": "define class boundaries"
+        },
+        "accept": {
+          "fi": "arvioijien erot tarkistettu",
+          "en": "reviewer differences checked"
+        }
+      },
+      {
+        "name": {
+          "fi": "Jako",
+          "en": "Splitting"
+        },
+        "work": {
+          "fi": "erota opetus ja testiaineisto",
+          "en": "separate training and test"
+        },
+        "accept": {
+          "fi": "sama kohde ei vuoda jakoihin",
+          "en": "no entity leakage across sets"
+        }
+      },
+      {
+        "name": {
+          "fi": "Laatu",
+          "en": "Quality"
+        },
+        "work": {
+          "fi": "laske kattavuus ryhmittäin",
+          "en": "measure coverage by group"
+        },
+        "accept": {
+          "fi": "puuttuvat ryhmät raportoitu",
+          "en": "missing groups reported"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_58",
+    "title": {
+      "fi": "Etätyövälineiden kehitys",
+      "en": "Remote work tools"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Saatavuus",
+          "en": "Availability"
+        },
+        "work": {
+          "fi": "näytä työajat aikavyöhykkeineen",
+          "en": "show hours with timezones"
+        },
+        "accept": {
+          "fi": "yörauha otetaan huomioon",
+          "en": "quiet hours respected"
+        }
+      },
+      {
+        "name": {
+          "fi": "Yhteismuokkaus",
+          "en": "Co-editing"
+        },
+        "work": {
+          "fi": "yhdistä samanaikaiset muutokset",
+          "en": "merge simultaneous edits"
+        },
+        "accept": {
+          "fi": "tekstiä ei häviä",
+          "en": "no text is lost"
+        }
+      },
+      {
+        "name": {
+          "fi": "Kokoukset",
+          "en": "Meetings"
+        },
+        "work": {
+          "fi": "liitä agenda ja päätökset",
+          "en": "attach agenda and decisions"
+        },
+        "accept": {
+          "fi": "päätöksellä nimetty vastuullinen",
+          "en": "decision has named owner"
+        }
+      },
+      {
+        "name": {
+          "fi": "Tilapäivitys",
+          "en": "Status update"
+        },
+        "work": {
+          "fi": "kokoa viikon työn yhteenveto",
+          "en": "compile weekly work digest"
+        },
+        "accept": {
+          "fi": "linkit osoittavat tehtäviin",
+          "en": "links point to tasks"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_59",
+    "title": {
+      "fi": "Sähköveneen suunnittelu",
+      "en": "Electric boat design"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Runko",
+          "en": "Hull"
+        },
+        "work": {
+          "fi": "mallinna kuorma ja kelluvuus",
+          "en": "model load and buoyancy"
+        },
+        "accept": {
+          "fi": "uppouma budjetin rajoissa",
+          "en": "displacement within budget"
+        }
+      },
+      {
+        "name": {
+          "fi": "Akkuasennus",
+          "en": "Battery installation"
+        },
+        "work": {
+          "fi": "suunnittele kuiva akkutila",
+          "en": "design dry battery enclosure"
+        },
+        "accept": {
+          "fi": "huoltopääsy säilyy",
+          "en": "maintenance access retained"
+        }
+      },
+      {
+        "name": {
+          "fi": "Potkurilinja",
+          "en": "Propulsion line"
+        },
+        "work": {
+          "fi": "kohdista moottori ja akseli",
+          "en": "align motor and shaft"
+        },
+        "accept": {
+          "fi": "pyörintä ilman tärinää",
+          "en": "rotation without vibration"
+        }
+      },
+      {
+        "name": {
+          "fi": "Ohjauspaneeli",
+          "en": "Control panel"
+        },
+        "work": {
+          "fi": "näytä varaustaso ja virta",
+          "en": "show charge and current"
+        },
+        "accept": {
+          "fi": "hätäkatkaisu saavutettavissa",
+          "en": "emergency cutoff reachable"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_60",
+    "title": {
+      "fi": "Peliarkiston digitointi",
+      "en": "Game archive digitization"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Luettelointi",
+          "en": "Cataloging"
+        },
+        "work": {
+          "fi": "kirjaa julkaisu ja versio",
+          "en": "record release and version"
+        },
+        "accept": {
+          "fi": "levy yksilöity tunnisteella",
+          "en": "disk has unique identifier"
+        }
+      },
+      {
+        "name": {
+          "fi": "Luku",
+          "en": "Reading media"
+        },
+        "work": {
+          "fi": "ota levystä tarkistettu kuva",
+          "en": "make verified disk image"
+        },
+        "accept": {
+          "fi": "kahden luvun tiiviste sama",
+          "en": "two reads have same checksum"
+        }
+      },
+      {
+        "name": {
+          "fi": "Metatiedot",
+          "en": "Metadata"
+        },
+        "work": {
+          "fi": "liitä kansi ja käyttöohje",
+          "en": "attach cover and manual"
+        },
+        "accept": {
+          "fi": "tekijä ja vuosi kirjattu",
+          "en": "creator and year recorded"
+        }
+      },
+      {
+        "name": {
+          "fi": "Säilytys",
+          "en": "Preservation"
+        },
+        "work": {
+          "fi": "kopioi kahteen sijaintiin",
+          "en": "copy to two locations"
+        },
+        "accept": {
+          "fi": "palautuskuva avautuu",
+          "en": "restored image opens"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_61",
+    "title": {
+      "fi": "Ajanvarauksen kioski",
+      "en": "Appointment kiosk"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Aloitusnäkymä",
+          "en": "Start screen"
+        },
+        "work": {
+          "fi": "näytä kieli ja palvelut",
+          "en": "show language and services"
+        },
+        "accept": {
+          "fi": "suuri kosketuskohde",
+          "en": "large touch target"
+        }
+      },
+      {
+        "name": {
+          "fi": "Jononumero",
+          "en": "Queue ticket"
+        },
+        "work": {
+          "fi": "varaa numero palvelulle",
+          "en": "reserve number for service"
+        },
+        "accept": {
+          "fi": "numero ei toistu päivässä",
+          "en": "number unique for the day"
+        }
+      },
+      {
+        "name": {
+          "fi": "Tulostus",
+          "en": "Printing"
+        },
+        "work": {
+          "fi": "tulosta numero ja ohje",
+          "en": "print number and guidance"
+        },
+        "accept": {
+          "fi": "paperivirhe näkyy heti",
+          "en": "paper error shown promptly"
+        }
+      },
+      {
+        "name": {
+          "fi": "Istunnon tyhjennys",
+          "en": "Session reset"
+        },
+        "work": {
+          "fi": "poista edellisen tiedot",
+          "en": "clear previous session data"
+        },
+        "accept": {
+          "fi": "uusi käyttäjä aloittaa tyhjästä",
+          "en": "next user starts clean"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_62",
+    "title": {
+      "fi": "Rakennuksen digitaalinen kaksonen",
+      "en": "Building digital twin"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Tilat",
+          "en": "Spaces"
+        },
+        "work": {
+          "fi": "numeroi huoneet ja kerrokset",
+          "en": "number rooms and floors"
+        },
+        "accept": {
+          "fi": "sama tunnus pohjakuvassa",
+          "en": "same ID in floor plan"
+        }
+      },
+      {
+        "name": {
+          "fi": "Anturilinkit",
+          "en": "Sensor links"
+        },
+        "work": {
+          "fi": "liitä lämpömittari huoneeseen",
+          "en": "link thermometer to room"
+        },
+        "accept": {
+          "fi": "arvo oikeassa huoneessa",
+          "en": "value in correct room"
+        }
+      },
+      {
+        "name": {
+          "fi": "Huoltotyöt",
+          "en": "Maintenance tasks"
+        },
+        "work": {
+          "fi": "merkitse huoltokohde karttaan",
+          "en": "mark service point on map"
+        },
+        "accept": {
+          "fi": "tehtävä avaa oikean laitteen",
+          "en": "task opens correct device"
+        }
+      },
+      {
+        "name": {
+          "fi": "Aikahistoria",
+          "en": "History"
+        },
+        "work": {
+          "fi": "näytä päiväkohtainen tilanne",
+          "en": "show daily state"
+        },
+        "accept": {
+          "fi": "aikaleima jokaisella arvolla",
+          "en": "each value has timestamp"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_63",
+    "title": {
+      "fi": "Kanban-toimiston jatkokehitys",
+      "en": "Kanban Office evolution"
+    },
+    "parts": [
+      {
+        "name": {
+          "fi": "Kerrokset",
+          "en": "Floors"
+        },
+        "work": {
+          "fi": "rakenna kuljettavat portaat",
+          "en": "build walkable stairs"
+        },
+        "accept": {
+          "fi": "kaikki neljä kerrosta saavutetaan",
+          "en": "all four floors reachable"
+        }
+      },
+      {
+        "name": {
+          "fi": "Korttien tasku",
+          "en": "Card pocket"
+        },
+        "work": {
+          "fi": "siirrä kortti taskun kautta",
+          "en": "move card via pocket"
+        },
+        "accept": {
+          "fi": "kortti säilyy yhtenä",
+          "en": "card remains unique"
+        }
+      },
+      {
+        "name": {
+          "fi": "Työtoverit",
+          "en": "Colleagues"
+        },
+        "work": {
+          "fi": "ohjaa väistävät hahmot",
+          "en": "steer yielding characters"
+        },
+        "accept": {
+          "fi": "pelaajan reitti jää vapaaksi",
+          "en": "player route stays clear"
+        }
+      },
+      {
+        "name": {
+          "fi": "Kaksikielisyys",
+          "en": "Bilingual interface"
+        },
+        "work": {
+          "fi": "vaihda FI ja EN lennossa",
+          "en": "switch FI and EN live"
+        },
+        "accept": {
+          "fi": "kaikki taulut päivittyvät",
+          "en": "all boards refresh"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,4538 @@
+{
+  "format_version": 1,
+  "source_bundle": "models.zip",
+  "card_source_sha256": "e13f848359c601a999dc382ec55dd550f6a8db05c685873a3a03f0232ccc161f",
+  "schemas": {
+    "cards": {
+      "name": "cards",
+      "source": "cards.js",
+      "schema_declared": true,
+      "fields": [
+        {
+          "key": "_id",
+          "path": "_id",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Kortin tunniste",
+            "en": "Card ID"
+          },
+          "help": {
+            "fi": "MongoDB-asiakirjan tunniste; sama kuin pelin kortin tunniste.",
+            "en": "Implicit MongoDB document ID; mirrors the game card ID."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "synthetic": true,
+          "source_line": null
+        },
+        {
+          "key": "title",
+          "path": "title",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Otsikko",
+            "en": "Title"
+          },
+          "help": {
+            "fi": "Otsikko. Lähdekenttä: title.",
+            "en": "Title. Source field: title."
+          },
+          "group": "basic",
+          "readonly": false,
+          "localized": true,
+          "optional": true,
+          "has_default": true,
+          "default": "",
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "source_line": 64
+        },
+        {
+          "key": "archived",
+          "path": "archived",
+          "type": "boolean",
+          "source_type": "Boolean",
+          "label": {
+            "fi": "Arkistoitu",
+            "en": "Archived"
+          },
+          "help": {
+            "fi": "Arkistoitu. Lähdekenttä: archived.",
+            "en": "Archived. Source field: archived."
+          },
+          "group": "workflow",
+          "readonly": false,
+          "localized": false,
+          "optional": false,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "auto_value": true,
+          "source_line": 72
+        },
+        {
+          "key": "archivedAt",
+          "path": "archivedAt",
+          "type": "date",
+          "source_type": "Date",
+          "label": {
+            "fi": "Arkistoitu viimeksi",
+            "en": "Archived at"
+          },
+          "help": {
+            "fi": "Arkistoitu viimeksi. Lähdekenttä: archivedAt.",
+            "en": "Archived at. Source field: archivedAt."
+          },
+          "group": "dates",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "source_line": 85
+        },
+        {
+          "key": "deletedAt",
+          "path": "deletedAt",
+          "type": "date",
+          "source_type": "Date",
+          "label": {
+            "fi": "Poistettu",
+            "en": "Deleted at"
+          },
+          "help": {
+            "fi": "Poistettu. Lähdekenttä: deletedAt.",
+            "en": "Deleted at. Source field: deletedAt."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "source_line": 95
+        },
+        {
+          "key": "deletedBy",
+          "path": "deletedBy",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Poistajan tunniste",
+            "en": "Deleted by"
+          },
+          "help": {
+            "fi": "Poistajan tunniste. Lähdekenttä: deletedBy.",
+            "en": "Deleted by. Source field: deletedBy."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "source_line": 101
+        },
+        {
+          "key": "deleteBatchId",
+          "path": "deleteBatchId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Poistoerän tunniste",
+            "en": "Delete batch id"
+          },
+          "help": {
+            "fi": "Poistoerän tunniste. Lähdekenttä: deleteBatchId.",
+            "en": "Delete batch id. Source field: deleteBatchId."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "source_line": 105
+        },
+        {
+          "key": "parentId",
+          "path": "parentId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Yläkortin tunniste",
+            "en": "Parent id"
+          },
+          "help": {
+            "fi": "Yläkortin tunniste. Lähdekenttä: parentId.",
+            "en": "Parent id. Source field: parentId."
+          },
+          "group": "workflow",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": true,
+          "default": "",
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "source_line": 109
+        },
+        {
+          "key": "listId",
+          "path": "listId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Listan tunniste",
+            "en": "List id"
+          },
+          "help": {
+            "fi": "Listan tunniste. Lähdekenttä: listId.",
+            "en": "List id. Source field: listId."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": true,
+          "default": "",
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "source_line": 117
+        },
+        {
+          "key": "swimlaneId",
+          "path": "swimlaneId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Uimaradan tunniste",
+            "en": "Swimlane id"
+          },
+          "help": {
+            "fi": "Uimaradan tunniste. Lähdekenttä: swimlaneId.",
+            "en": "Swimlane id. Source field: swimlaneId."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": false,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "source_line": 125
+        },
+        {
+          "key": "boardId",
+          "path": "boardId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Taulun tunniste",
+            "en": "Board id"
+          },
+          "help": {
+            "fi": "Taulun tunniste. Lähdekenttä: boardId.",
+            "en": "Board id. Source field: boardId."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": true,
+          "default": "",
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "source_line": 134
+        },
+        {
+          "key": "coverId",
+          "path": "coverId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Kansikuvan tunniste",
+            "en": "Cover id"
+          },
+          "help": {
+            "fi": "Kansikuvan tunniste. Lähdekenttä: coverId.",
+            "en": "Cover id. Source field: coverId."
+          },
+          "group": "appearance",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": true,
+          "default": "",
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "source_line": 142
+        },
+        {
+          "key": "color",
+          "path": "color",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Väri",
+            "en": "Color"
+          },
+          "help": {
+            "fi": "Väri. Lähdekenttä: color.",
+            "en": "Color. Source field: color."
+          },
+          "group": "appearance",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "validation_note": "Named CARD_COLORS palette value or #rrggbb; imported palette definition not supplied.",
+          "source_line": 150
+        },
+        {
+          "key": "createdAt",
+          "path": "createdAt",
+          "type": "date",
+          "source_type": "Date",
+          "label": {
+            "fi": "Luotu",
+            "en": "Created at"
+          },
+          "help": {
+            "fi": "Luotu. Lähdekenttä: createdAt.",
+            "en": "Created at. Source field: createdAt."
+          },
+          "group": "dates",
+          "readonly": true,
+          "localized": false,
+          "optional": false,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "auto_value": true,
+          "source_line": 162
+        },
+        {
+          "key": "modifiedAt",
+          "path": "modifiedAt",
+          "type": "date",
+          "source_type": "Date",
+          "label": {
+            "fi": "Muokattu",
+            "en": "Modified at"
+          },
+          "help": {
+            "fi": "Muokattu. Lähdekenttä: modifiedAt.",
+            "en": "Modified at. Source field: modifiedAt."
+          },
+          "group": "dates",
+          "readonly": true,
+          "localized": false,
+          "optional": false,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "auto_value": true,
+          "source_line": 178
+        },
+        {
+          "key": "customFields",
+          "path": "customFields",
+          "type": "array",
+          "source_type": "Array",
+          "label": {
+            "fi": "Mukautetut kentät",
+            "en": "Custom fields"
+          },
+          "help": {
+            "fi": "Mukautetut kentät. Lähdekenttä: customFields.",
+            "en": "Custom fields. Source field: customFields."
+          },
+          "group": "custom",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": true,
+          "default": [],
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "items": {
+            "key": "customFields.$",
+            "path": "customFields.$",
+            "type": "object",
+            "source_type": "new SimpleSchema",
+            "label": {
+              "fi": "$",
+              "en": "$"
+            },
+            "help": {
+              "fi": "$. Lähdekenttä: customFields.$.",
+              "en": "$. Source field: customFields.$."
+            },
+            "group": "custom",
+            "readonly": false,
+            "localized": false,
+            "optional": false,
+            "has_default": false,
+            "default": null,
+            "allowed_values": [],
+            "source": "cards.js",
+            "children": [
+              {
+                "key": "_id",
+                "path": "customFields.$._id",
+                "type": "string",
+                "source_type": "String",
+                "label": {
+                  "fi": "Mukautetun kentän tunniste",
+                  "en": "Custom field ID"
+                },
+                "help": {
+                  "fi": "Kortin tunniste. Lähdekenttä: customFields.$._id.",
+                  "en": "Card ID. Source field: customFields.$._id."
+                },
+                "group": "custom",
+                "readonly": false,
+                "localized": false,
+                "optional": true,
+                "has_default": true,
+                "default": "",
+                "allowed_values": [],
+                "source": "cards.js",
+                "children": [],
+                "source_line": 199
+              },
+              {
+                "key": "value",
+                "path": "customFields.$.value",
+                "type": "mixed",
+                "source_type": "Match.OneOf(String, Number, Boolean, Date, [String])",
+                "label": {
+                  "fi": "Arvo",
+                  "en": "Value"
+                },
+                "help": {
+                  "fi": "Arvo. Lähdekenttä: customFields.$.value.",
+                  "en": "Value. Source field: customFields.$.value."
+                },
+                "group": "custom",
+                "readonly": false,
+                "localized": true,
+                "optional": true,
+                "has_default": true,
+                "default": "",
+                "allowed_values": [],
+                "source": "cards.js",
+                "children": [],
+                "accepted_types": [
+                  "string",
+                  "number",
+                  "boolean",
+                  "date",
+                  "array"
+                ],
+                "item_type": "string",
+                "items": {
+                  "key": "value.$",
+                  "path": "customFields.$.value.$",
+                  "type": "string",
+                  "source_type": "String",
+                  "label": {
+                    "fi": "$",
+                    "en": "$"
+                  },
+                  "help": {
+                    "fi": "$. Lähdekenttä: customFields.$.value.$.",
+                    "en": "$. Source field: customFields.$.value.$."
+                  },
+                  "group": "custom",
+                  "readonly": false,
+                  "localized": false,
+                  "optional": true,
+                  "has_default": false,
+                  "default": null,
+                  "allowed_values": [],
+                  "source": "cards.js",
+                  "children": [],
+                  "source_line": 215
+                },
+                "source_line": 207
+              }
+            ],
+            "source_line": 197
+          },
+          "source_line": 189
+        },
+        {
+          "key": "dateLastActivity",
+          "path": "dateLastActivity",
+          "type": "date",
+          "source_type": "Date",
+          "label": {
+            "fi": "Viimeisin tapahtuma",
+            "en": "Last activity"
+          },
+          "help": {
+            "fi": "Viimeisin tapahtuma. Lähdekenttä: dateLastActivity.",
+            "en": "Last activity. Source field: dateLastActivity."
+          },
+          "group": "dates",
+          "readonly": true,
+          "localized": false,
+          "optional": false,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "auto_value": true,
+          "source_line": 221
+        },
+        {
+          "key": "description",
+          "path": "description",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Kuvaus",
+            "en": "Description"
+          },
+          "help": {
+            "fi": "Kuvaus. Lähdekenttä: description.",
+            "en": "Description. Source field: description."
+          },
+          "group": "basic",
+          "readonly": false,
+          "localized": true,
+          "optional": true,
+          "has_default": true,
+          "default": "",
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "source_line": 230
+        },
+        {
+          "key": "requestedBy",
+          "path": "requestedBy",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Pyytäjän nimi",
+            "en": "Requested by (display name)"
+          },
+          "help": {
+            "fi": "Pyytäjän nimi. Lähdekenttä: requestedBy.",
+            "en": "Requested by (display name). Source field: requestedBy."
+          },
+          "group": "basic",
+          "readonly": false,
+          "localized": true,
+          "optional": true,
+          "has_default": true,
+          "default": "",
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "source_line": 238
+        },
+        {
+          "key": "assignedBy",
+          "path": "assignedBy",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Tehtävän antajan nimi",
+            "en": "Assigned by (display name)"
+          },
+          "help": {
+            "fi": "Tehtävän antajan nimi. Lähdekenttä: assignedBy.",
+            "en": "Assigned by (display name). Source field: assignedBy."
+          },
+          "group": "basic",
+          "readonly": false,
+          "localized": true,
+          "optional": true,
+          "has_default": true,
+          "default": "",
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "source_line": 246
+        },
+        {
+          "key": "labelIds",
+          "path": "labelIds",
+          "type": "array",
+          "source_type": "Array",
+          "label": {
+            "fi": "Tunnisteiden tunnisteet",
+            "en": "Label IDs"
+          },
+          "help": {
+            "fi": "Tunnisteiden tunnisteet. Lähdekenttä: labelIds.",
+            "en": "Label IDs. Source field: labelIds."
+          },
+          "group": "people",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": true,
+          "default": [],
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "items": {
+            "key": "labelIds.$",
+            "path": "labelIds.$",
+            "type": "string",
+            "source_type": "String",
+            "label": {
+              "fi": "$",
+              "en": "$"
+            },
+            "help": {
+              "fi": "$. Lähdekenttä: labelIds.$.",
+              "en": "$. Source field: labelIds.$."
+            },
+            "group": "people",
+            "readonly": false,
+            "localized": false,
+            "optional": false,
+            "has_default": false,
+            "default": null,
+            "allowed_values": [],
+            "source": "cards.js",
+            "children": [],
+            "source_line": 262
+          },
+          "source_line": 254
+        },
+        {
+          "key": "members",
+          "path": "members",
+          "type": "array",
+          "source_type": "Array",
+          "label": {
+            "fi": "Jäsenten tunnisteet",
+            "en": "Members"
+          },
+          "help": {
+            "fi": "Jäsenten tunnisteet. Lähdekenttä: members.",
+            "en": "Members. Source field: members."
+          },
+          "group": "people",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": true,
+          "default": [],
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "items": {
+            "key": "members.$",
+            "path": "members.$",
+            "type": "string",
+            "source_type": "String",
+            "label": {
+              "fi": "$",
+              "en": "$"
+            },
+            "help": {
+              "fi": "$. Lähdekenttä: members.$.",
+              "en": "$. Source field: members.$."
+            },
+            "group": "people",
+            "readonly": false,
+            "localized": false,
+            "optional": false,
+            "has_default": false,
+            "default": null,
+            "allowed_values": [],
+            "source": "cards.js",
+            "children": [],
+            "source_line": 273
+          },
+          "source_line": 265
+        },
+        {
+          "key": "assignees",
+          "path": "assignees",
+          "type": "array",
+          "source_type": "Array",
+          "label": {
+            "fi": "Vastuuhenkilöiden tunnisteet",
+            "en": "Assignees"
+          },
+          "help": {
+            "fi": "Vastuuhenkilöiden tunnisteet. Lähdekenttä: assignees.",
+            "en": "Assignees. Source field: assignees."
+          },
+          "group": "people",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": true,
+          "default": [],
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "validation_note": "Source comment says maximum one assignee, but schema declares no maxCount constraint.",
+          "items": {
+            "key": "assignees.$",
+            "path": "assignees.$",
+            "type": "string",
+            "source_type": "String",
+            "label": {
+              "fi": "$",
+              "en": "$"
+            },
+            "help": {
+              "fi": "$. Lähdekenttä: assignees.$.",
+              "en": "$. Source field: assignees.$."
+            },
+            "group": "people",
+            "readonly": false,
+            "localized": false,
+            "optional": false,
+            "has_default": false,
+            "default": null,
+            "allowed_values": [],
+            "source": "cards.js",
+            "children": [],
+            "source_line": 285
+          },
+          "source_line": 276
+        },
+        {
+          "key": "requesters",
+          "path": "requesters",
+          "type": "array",
+          "source_type": "Array",
+          "label": {
+            "fi": "Pyytäjien tunnisteet",
+            "en": "Requesters"
+          },
+          "help": {
+            "fi": "Pyytäjien tunnisteet. Lähdekenttä: requesters.",
+            "en": "Requesters. Source field: requesters."
+          },
+          "group": "people",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": true,
+          "default": [],
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "items": {
+            "key": "requesters.$",
+            "path": "requesters.$",
+            "type": "string",
+            "source_type": "String",
+            "label": {
+              "fi": "$",
+              "en": "$"
+            },
+            "help": {
+              "fi": "$. Lähdekenttä: requesters.$.",
+              "en": "$. Source field: requesters.$."
+            },
+            "group": "people",
+            "readonly": false,
+            "localized": false,
+            "optional": false,
+            "has_default": false,
+            "default": null,
+            "allowed_values": [],
+            "source": "cards.js",
+            "children": [],
+            "source_line": 294
+          },
+          "source_line": 288
+        },
+        {
+          "key": "assigners",
+          "path": "assigners",
+          "type": "array",
+          "source_type": "Array",
+          "label": {
+            "fi": "Tehtävän antajien tunnisteet",
+            "en": "Assigners"
+          },
+          "help": {
+            "fi": "Tehtävän antajien tunnisteet. Lähdekenttä: assigners.",
+            "en": "Assigners. Source field: assigners."
+          },
+          "group": "people",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": true,
+          "default": [],
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "items": {
+            "key": "assigners.$",
+            "path": "assigners.$",
+            "type": "string",
+            "source_type": "String",
+            "label": {
+              "fi": "$",
+              "en": "$"
+            },
+            "help": {
+              "fi": "$. Lähdekenttä: assigners.$.",
+              "en": "$. Source field: assigners.$."
+            },
+            "group": "people",
+            "readonly": false,
+            "localized": false,
+            "optional": false,
+            "has_default": false,
+            "default": null,
+            "allowed_values": [],
+            "source": "cards.js",
+            "children": [],
+            "source_line": 303
+          },
+          "source_line": 297
+        },
+        {
+          "key": "receivedAt",
+          "path": "receivedAt",
+          "type": "date",
+          "source_type": "Date",
+          "label": {
+            "fi": "Vastaanotettu",
+            "en": "Received at"
+          },
+          "help": {
+            "fi": "Vastaanotettu. Lähdekenttä: receivedAt.",
+            "en": "Received at. Source field: receivedAt."
+          },
+          "group": "dates",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "source_line": 306
+        },
+        {
+          "key": "startAt",
+          "path": "startAt",
+          "type": "date",
+          "source_type": "Date",
+          "label": {
+            "fi": "Aloitusaika",
+            "en": "Start at"
+          },
+          "help": {
+            "fi": "Aloitusaika. Lähdekenttä: startAt.",
+            "en": "Start at. Source field: startAt."
+          },
+          "group": "dates",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "source_line": 313
+        },
+        {
+          "key": "dueAt",
+          "path": "dueAt",
+          "type": "date",
+          "source_type": "Date",
+          "label": {
+            "fi": "Määräaika",
+            "en": "Due at"
+          },
+          "help": {
+            "fi": "Määräaika. Lähdekenttä: dueAt.",
+            "en": "Due at. Source field: dueAt."
+          },
+          "group": "dates",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "source_line": 320
+        },
+        {
+          "key": "endAt",
+          "path": "endAt",
+          "type": "date",
+          "source_type": "Date",
+          "label": {
+            "fi": "Päättymisaika",
+            "en": "End at"
+          },
+          "help": {
+            "fi": "Päättymisaika. Lähdekenttä: endAt.",
+            "en": "End at. Source field: endAt."
+          },
+          "group": "dates",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "source_line": 327
+        },
+        {
+          "key": "dueComplete",
+          "path": "dueComplete",
+          "type": "boolean",
+          "source_type": "Boolean",
+          "label": {
+            "fi": "Määräaikatehtävä valmis",
+            "en": "Due complete"
+          },
+          "help": {
+            "fi": "Määräaikatehtävä valmis. Lähdekenttä: dueComplete.",
+            "en": "Due complete. Source field: dueComplete."
+          },
+          "group": "workflow",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": true,
+          "default": false,
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "source_line": 334
+        },
+        {
+          "key": "stickers",
+          "path": "stickers",
+          "type": "array",
+          "source_type": "Array",
+          "label": {
+            "fi": "Tarrat",
+            "en": "Stickers"
+          },
+          "help": {
+            "fi": "Tarrat. Lähdekenttä: stickers.",
+            "en": "Stickers. Source field: stickers."
+          },
+          "group": "appearance",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": true,
+          "default": [],
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "items": {
+            "key": "stickers.$",
+            "path": "stickers.$",
+            "type": "object",
+            "source_type": "new SimpleSchema",
+            "label": {
+              "fi": "$",
+              "en": "$"
+            },
+            "help": {
+              "fi": "$. Lähdekenttä: stickers.$.",
+              "en": "$. Source field: stickers.$."
+            },
+            "group": "appearance",
+            "readonly": false,
+            "localized": false,
+            "optional": false,
+            "has_default": false,
+            "default": null,
+            "allowed_values": [],
+            "source": "cards.js",
+            "children": [
+              {
+                "key": "icon",
+                "path": "stickers.$.icon",
+                "type": "string",
+                "source_type": "String",
+                "label": {
+                  "fi": "Kuvake",
+                  "en": "Icon"
+                },
+                "help": {
+                  "fi": "Kuvake. Lähdekenttä: stickers.$.icon.",
+                  "en": "Icon. Source field: stickers.$.icon."
+                },
+                "group": "appearance",
+                "readonly": false,
+                "localized": false,
+                "optional": true,
+                "has_default": true,
+                "default": "",
+                "allowed_values": [],
+                "source": "cards.js",
+                "children": [],
+                "source_line": 353
+              },
+              {
+                "key": "name",
+                "path": "stickers.$.name",
+                "type": "string",
+                "source_type": "String",
+                "label": {
+                  "fi": "Nimi",
+                  "en": "Name"
+                },
+                "help": {
+                  "fi": "Nimi. Lähdekenttä: stickers.$.name.",
+                  "en": "Name. Source field: stickers.$.name."
+                },
+                "group": "appearance",
+                "readonly": false,
+                "localized": true,
+                "optional": true,
+                "has_default": true,
+                "default": "",
+                "allowed_values": [],
+                "source": "cards.js",
+                "children": [],
+                "source_line": 362
+              },
+              {
+                "key": "highlight",
+                "path": "stickers.$.highlight",
+                "type": "string",
+                "source_type": "String",
+                "label": {
+                  "fi": "Korostus",
+                  "en": "Highlight"
+                },
+                "help": {
+                  "fi": "Korostus. Lähdekenttä: stickers.$.highlight.",
+                  "en": "Highlight. Source field: stickers.$.highlight."
+                },
+                "group": "appearance",
+                "readonly": false,
+                "localized": false,
+                "optional": true,
+                "has_default": false,
+                "default": null,
+                "allowed_values": [
+                  "underline",
+                  "round"
+                ],
+                "source": "cards.js",
+                "children": [],
+                "source_line": 371
+              },
+              {
+                "key": "position",
+                "path": "stickers.$.position",
+                "type": "number",
+                "source_type": "Number",
+                "label": {
+                  "fi": "Sijaintijärjestys",
+                  "en": "Position"
+                },
+                "help": {
+                  "fi": "Sijaintijärjestys. Lähdekenttä: stickers.$.position.",
+                  "en": "Position. Source field: stickers.$.position."
+                },
+                "group": "appearance",
+                "readonly": false,
+                "localized": false,
+                "optional": true,
+                "has_default": true,
+                "default": 0,
+                "allowed_values": [],
+                "source": "cards.js",
+                "children": [],
+                "source_line": 381
+              }
+            ],
+            "source_line": 351
+          },
+          "source_line": 343
+        },
+        {
+          "key": "locationName",
+          "path": "locationName",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Paikan nimi",
+            "en": "Location name"
+          },
+          "help": {
+            "fi": "Paikan nimi. Lähdekenttä: locationName.",
+            "en": "Location name. Source field: locationName."
+          },
+          "group": "location",
+          "readonly": false,
+          "localized": true,
+          "optional": true,
+          "has_default": true,
+          "default": "",
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "source_line": 391
+        },
+        {
+          "key": "locationAddress",
+          "path": "locationAddress",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Osoite",
+            "en": "Location address"
+          },
+          "help": {
+            "fi": "Osoite. Lähdekenttä: locationAddress.",
+            "en": "Location address. Source field: locationAddress."
+          },
+          "group": "location",
+          "readonly": false,
+          "localized": true,
+          "optional": true,
+          "has_default": true,
+          "default": "",
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "source_line": 399
+        },
+        {
+          "key": "locationLatitude",
+          "path": "locationLatitude",
+          "type": "number",
+          "source_type": "Number",
+          "label": {
+            "fi": "Leveysaste",
+            "en": "Location latitude"
+          },
+          "help": {
+            "fi": "Leveysaste. Lähdekenttä: locationLatitude.",
+            "en": "Location latitude. Source field: locationLatitude."
+          },
+          "group": "location",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "source_line": 407
+        },
+        {
+          "key": "locationLongitude",
+          "path": "locationLongitude",
+          "type": "number",
+          "source_type": "Number",
+          "label": {
+            "fi": "Pituusaste",
+            "en": "Location longitude"
+          },
+          "help": {
+            "fi": "Pituusaste. Lähdekenttä: locationLongitude.",
+            "en": "Location longitude. Source field: locationLongitude."
+          },
+          "group": "location",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "source_line": 414
+        },
+        {
+          "key": "locations",
+          "path": "locations",
+          "type": "array",
+          "source_type": "Array",
+          "label": {
+            "fi": "Sijainnit",
+            "en": "Locations"
+          },
+          "help": {
+            "fi": "Sijainnit. Lähdekenttä: locations.",
+            "en": "Locations. Source field: locations."
+          },
+          "group": "location",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": true,
+          "default": [],
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "items": {
+            "key": "locations.$",
+            "path": "locations.$",
+            "type": "object",
+            "source_type": "new SimpleSchema",
+            "label": {
+              "fi": "$",
+              "en": "$"
+            },
+            "help": {
+              "fi": "$. Lähdekenttä: locations.$.",
+              "en": "$. Source field: locations.$."
+            },
+            "group": "location",
+            "readonly": false,
+            "localized": false,
+            "optional": false,
+            "has_default": false,
+            "default": null,
+            "allowed_values": [],
+            "source": "cards.js",
+            "children": [
+              {
+                "key": "_id",
+                "path": "locations.$._id",
+                "type": "string",
+                "source_type": "String",
+                "label": {
+                  "fi": "Sijainnin tunniste",
+                  "en": "Location entry ID"
+                },
+                "help": {
+                  "fi": "Kortin tunniste. Lähdekenttä: locations.$._id.",
+                  "en": "Card ID. Source field: locations.$._id."
+                },
+                "group": "location",
+                "readonly": false,
+                "localized": false,
+                "optional": false,
+                "has_default": false,
+                "default": null,
+                "allowed_values": [],
+                "source": "cards.js",
+                "children": [],
+                "source_line": 434
+              },
+              {
+                "key": "name",
+                "path": "locations.$.name",
+                "type": "string",
+                "source_type": "String",
+                "label": {
+                  "fi": "Nimi",
+                  "en": "Name"
+                },
+                "help": {
+                  "fi": "Nimi. Lähdekenttä: locations.$.name.",
+                  "en": "Name. Source field: locations.$.name."
+                },
+                "group": "location",
+                "readonly": false,
+                "localized": true,
+                "optional": true,
+                "has_default": true,
+                "default": "",
+                "allowed_values": [],
+                "source": "cards.js",
+                "children": [],
+                "source_line": 440
+              },
+              {
+                "key": "address",
+                "path": "locations.$.address",
+                "type": "string",
+                "source_type": "String",
+                "label": {
+                  "fi": "Osoite",
+                  "en": "Address"
+                },
+                "help": {
+                  "fi": "Osoite. Lähdekenttä: locations.$.address.",
+                  "en": "Address. Source field: locations.$.address."
+                },
+                "group": "location",
+                "readonly": false,
+                "localized": true,
+                "optional": true,
+                "has_default": true,
+                "default": "",
+                "allowed_values": [],
+                "source": "cards.js",
+                "children": [],
+                "source_line": 448
+              },
+              {
+                "key": "latitude",
+                "path": "locations.$.latitude",
+                "type": "number",
+                "source_type": "Number",
+                "label": {
+                  "fi": "Leveysaste",
+                  "en": "Latitude"
+                },
+                "help": {
+                  "fi": "Leveysaste. Lähdekenttä: locations.$.latitude.",
+                  "en": "Latitude. Source field: locations.$.latitude."
+                },
+                "group": "location",
+                "readonly": false,
+                "localized": false,
+                "optional": true,
+                "has_default": false,
+                "default": null,
+                "allowed_values": [],
+                "source": "cards.js",
+                "children": [],
+                "source_line": 456
+              },
+              {
+                "key": "longitude",
+                "path": "locations.$.longitude",
+                "type": "number",
+                "source_type": "Number",
+                "label": {
+                  "fi": "Pituusaste",
+                  "en": "Longitude"
+                },
+                "help": {
+                  "fi": "Pituusaste. Lähdekenttä: locations.$.longitude.",
+                  "en": "Longitude. Source field: locations.$.longitude."
+                },
+                "group": "location",
+                "readonly": false,
+                "localized": false,
+                "optional": true,
+                "has_default": false,
+                "default": null,
+                "allowed_values": [],
+                "source": "cards.js",
+                "children": [],
+                "source_line": 463
+              }
+            ],
+            "source_line": 432
+          },
+          "source_line": 421
+        },
+        {
+          "key": "spentTime",
+          "path": "spentTime",
+          "type": "number",
+          "source_type": "Number",
+          "label": {
+            "fi": "Käytetty aika",
+            "en": "Spent time"
+          },
+          "help": {
+            "fi": "Käytetty aika. Lähdekenttä: spentTime.",
+            "en": "Spent time. Source field: spentTime."
+          },
+          "group": "workflow",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": true,
+          "default": 0,
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "source_line": 472
+        },
+        {
+          "key": "isOvertime",
+          "path": "isOvertime",
+          "type": "boolean",
+          "source_type": "Boolean",
+          "label": {
+            "fi": "Aika ylitetty",
+            "en": "Is overtime"
+          },
+          "help": {
+            "fi": "Aika ylitetty. Lähdekenttä: isOvertime.",
+            "en": "Is overtime. Source field: isOvertime."
+          },
+          "group": "workflow",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": true,
+          "default": false,
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "source_line": 480
+        },
+        {
+          "key": "userId",
+          "path": "userId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Tekijän tunniste",
+            "en": "Author user ID"
+          },
+          "help": {
+            "fi": "Tekijän tunniste. Lähdekenttä: userId.",
+            "en": "Author user ID. Source field: userId."
+          },
+          "group": "people",
+          "readonly": true,
+          "localized": false,
+          "optional": false,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "auto_value": true,
+          "source_line": 490
+        },
+        {
+          "key": "sort",
+          "path": "sort",
+          "type": "number",
+          "source_type": "Number",
+          "label": {
+            "fi": "Järjestys",
+            "en": "Sort"
+          },
+          "help": {
+            "fi": "Järjestys. Lähdekenttä: sort.",
+            "en": "Sort. Source field: sort."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": true,
+          "default": 0,
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "source_line": 503
+        },
+        {
+          "key": "subtaskSort",
+          "path": "subtaskSort",
+          "type": "number",
+          "source_type": "Number",
+          "label": {
+            "fi": "Alitehtävän järjestys",
+            "en": "Subtask sort"
+          },
+          "help": {
+            "fi": "Alitehtävän järjestys. Lähdekenttä: subtaskSort.",
+            "en": "Subtask sort. Source field: subtaskSort."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": true,
+          "default": -1,
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "source_line": 511
+        },
+        {
+          "key": "type",
+          "path": "type",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Tyyppi",
+            "en": "Card type"
+          },
+          "help": {
+            "fi": "Tyyppi. Lähdekenttä: type.",
+            "en": "Card type. Source field: type."
+          },
+          "group": "workflow",
+          "readonly": false,
+          "localized": false,
+          "optional": false,
+          "has_default": true,
+          "default": null,
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "default_expression": "TYPE_CARD",
+          "validation_note": "Source allowedValues is commented out; TYPE_CARD default is imported, not defined in supplied files.",
+          "source_line": 519
+        },
+        {
+          "key": "linkedId",
+          "path": "linkedId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Linkitetyn kohteen tunniste",
+            "en": "Linked id"
+          },
+          "help": {
+            "fi": "Linkitetyn kohteen tunniste. Lähdekenttä: linkedId.",
+            "en": "Linked id. Source field: linkedId."
+          },
+          "group": "workflow",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": true,
+          "default": "",
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "source_line": 527
+        },
+        {
+          "key": "cardDependencies",
+          "path": "cardDependencies",
+          "type": "array",
+          "source_type": "Array",
+          "label": {
+            "fi": "Korttien riippuvuudet",
+            "en": "Card dependencies"
+          },
+          "help": {
+            "fi": "Korttien riippuvuudet. Lähdekenttä: cardDependencies.",
+            "en": "Card dependencies. Source field: cardDependencies."
+          },
+          "group": "dependencies",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": true,
+          "default": [],
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "items": {
+            "key": "cardDependencies.$",
+            "path": "cardDependencies.$",
+            "type": "object",
+            "source_type": "new SimpleSchema",
+            "label": {
+              "fi": "$",
+              "en": "$"
+            },
+            "help": {
+              "fi": "$. Lähdekenttä: cardDependencies.$.",
+              "en": "$. Source field: cardDependencies.$."
+            },
+            "group": "dependencies",
+            "readonly": false,
+            "localized": false,
+            "optional": false,
+            "has_default": false,
+            "default": null,
+            "allowed_values": [],
+            "source": "cards.js",
+            "children": [
+              {
+                "key": "cardId",
+                "path": "cardDependencies.$.cardId",
+                "type": "string",
+                "source_type": "String",
+                "label": {
+                  "fi": "Kortin tunniste",
+                  "en": "Card id"
+                },
+                "help": {
+                  "fi": "Kortin tunniste. Lähdekenttä: cardDependencies.$.cardId.",
+                  "en": "Card id. Source field: cardDependencies.$.cardId."
+                },
+                "group": "dependencies",
+                "readonly": false,
+                "localized": false,
+                "optional": false,
+                "has_default": false,
+                "default": null,
+                "allowed_values": [],
+                "source": "cards.js",
+                "children": [],
+                "source_line": 549
+              },
+              {
+                "key": "type",
+                "path": "cardDependencies.$.type",
+                "type": "string",
+                "source_type": "String",
+                "label": {
+                  "fi": "Tyyppi",
+                  "en": "Card type"
+                },
+                "help": {
+                  "fi": "Tyyppi. Lähdekenttä: cardDependencies.$.type.",
+                  "en": "Card type. Source field: cardDependencies.$.type."
+                },
+                "group": "dependencies",
+                "readonly": false,
+                "localized": false,
+                "optional": true,
+                "has_default": true,
+                "default": null,
+                "allowed_values": [],
+                "source": "cards.js",
+                "children": [],
+                "default_expression": "DEFAULT_DEPENDENCY_TYPE",
+                "source_line": 553
+              },
+              {
+                "key": "color",
+                "path": "cardDependencies.$.color",
+                "type": "string",
+                "source_type": "String",
+                "label": {
+                  "fi": "Väri",
+                  "en": "Color"
+                },
+                "help": {
+                  "fi": "Väri. Lähdekenttä: cardDependencies.$.color.",
+                  "en": "Color. Source field: cardDependencies.$.color."
+                },
+                "group": "dependencies",
+                "readonly": false,
+                "localized": false,
+                "optional": true,
+                "has_default": true,
+                "default": null,
+                "allowed_values": [],
+                "source": "cards.js",
+                "children": [],
+                "default_expression": "DEFAULT_DEPENDENCY_COLOR",
+                "source_line": 559
+              },
+              {
+                "key": "icon",
+                "path": "cardDependencies.$.icon",
+                "type": "string",
+                "source_type": "String",
+                "label": {
+                  "fi": "Kuvake",
+                  "en": "Icon"
+                },
+                "help": {
+                  "fi": "Kuvake. Lähdekenttä: cardDependencies.$.icon.",
+                  "en": "Icon. Source field: cardDependencies.$.icon."
+                },
+                "group": "dependencies",
+                "readonly": false,
+                "localized": false,
+                "optional": true,
+                "has_default": true,
+                "default": null,
+                "allowed_values": [],
+                "source": "cards.js",
+                "children": [],
+                "default_expression": "DEFAULT_DEPENDENCY_ICON",
+                "source_line": 565
+              }
+            ],
+            "source_line": 547
+          },
+          "source_line": 535
+        },
+        {
+          "key": "vote",
+          "path": "vote",
+          "type": "object",
+          "source_type": "Object",
+          "label": {
+            "fi": "Äänestys",
+            "en": "Vote"
+          },
+          "help": {
+            "fi": "Äänestys. Lähdekenttä: vote.",
+            "en": "Vote. Source field: vote."
+          },
+          "group": "voting",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [
+            {
+              "key": "vote.question",
+              "path": "vote.question",
+              "type": "string",
+              "source_type": "String",
+              "label": {
+                "fi": "Kysymys",
+                "en": "Question"
+              },
+              "help": {
+                "fi": "Kysymys. Lähdekenttä: vote.question.",
+                "en": "Question. Source field: vote.question."
+              },
+              "group": "voting",
+              "readonly": false,
+              "localized": true,
+              "optional": false,
+              "has_default": true,
+              "default": "",
+              "allowed_values": [],
+              "source": "cards.js",
+              "children": [],
+              "source_line": 580
+            },
+            {
+              "key": "vote.positive",
+              "path": "vote.positive",
+              "type": "array",
+              "source_type": "Array",
+              "label": {
+                "fi": "Puoltavat käyttäjät",
+                "en": "Positive"
+              },
+              "help": {
+                "fi": "Puoltavat käyttäjät. Lähdekenttä: vote.positive.",
+                "en": "Positive. Source field: vote.positive."
+              },
+              "group": "voting",
+              "readonly": false,
+              "localized": false,
+              "optional": true,
+              "has_default": true,
+              "default": [],
+              "allowed_values": [],
+              "source": "cards.js",
+              "children": [],
+              "items": {
+                "key": "vote.positive.$",
+                "path": "vote.positive.$",
+                "type": "string",
+                "source_type": "String",
+                "label": {
+                  "fi": "$",
+                  "en": "$"
+                },
+                "help": {
+                  "fi": "$. Lähdekenttä: vote.positive.$.",
+                  "en": "$. Source field: vote.positive.$."
+                },
+                "group": "voting",
+                "readonly": false,
+                "localized": false,
+                "optional": false,
+                "has_default": false,
+                "default": null,
+                "allowed_values": [],
+                "source": "cards.js",
+                "children": [],
+                "source_line": 592
+              },
+              "source_line": 584
+            },
+            {
+              "key": "vote.negative",
+              "path": "vote.negative",
+              "type": "array",
+              "source_type": "Array",
+              "label": {
+                "fi": "Vastustavat käyttäjät",
+                "en": "Negative"
+              },
+              "help": {
+                "fi": "Vastustavat käyttäjät. Lähdekenttä: vote.negative.",
+                "en": "Negative. Source field: vote.negative."
+              },
+              "group": "voting",
+              "readonly": false,
+              "localized": false,
+              "optional": true,
+              "has_default": true,
+              "default": [],
+              "allowed_values": [],
+              "source": "cards.js",
+              "children": [],
+              "items": {
+                "key": "vote.negative.$",
+                "path": "vote.negative.$",
+                "type": "string",
+                "source_type": "String",
+                "label": {
+                  "fi": "$",
+                  "en": "$"
+                },
+                "help": {
+                  "fi": "$. Lähdekenttä: vote.negative.$.",
+                  "en": "$. Source field: vote.negative.$."
+                },
+                "group": "voting",
+                "readonly": false,
+                "localized": false,
+                "optional": false,
+                "has_default": false,
+                "default": null,
+                "allowed_values": [],
+                "source": "cards.js",
+                "children": [],
+                "source_line": 603
+              },
+              "source_line": 595
+            },
+            {
+              "key": "vote.end",
+              "path": "vote.end",
+              "type": "date",
+              "source_type": "Date",
+              "label": {
+                "fi": "Päättyminen",
+                "en": "End"
+              },
+              "help": {
+                "fi": "Päättyminen. Lähdekenttä: vote.end.",
+                "en": "End. Source field: vote.end."
+              },
+              "group": "voting",
+              "readonly": false,
+              "localized": false,
+              "optional": true,
+              "has_default": true,
+              "default": null,
+              "allowed_values": [],
+              "source": "cards.js",
+              "children": [],
+              "source_line": 606
+            },
+            {
+              "key": "vote.public",
+              "path": "vote.public",
+              "type": "boolean",
+              "source_type": "Boolean",
+              "label": {
+                "fi": "Julkinen äänestys",
+                "en": "Public"
+              },
+              "help": {
+                "fi": "Julkinen äänestys. Lähdekenttä: vote.public.",
+                "en": "Public. Source field: vote.public."
+              },
+              "group": "voting",
+              "readonly": false,
+              "localized": false,
+              "optional": false,
+              "has_default": true,
+              "default": false,
+              "allowed_values": [],
+              "source": "cards.js",
+              "children": [],
+              "source_line": 611
+            },
+            {
+              "key": "vote.allowNonBoardMembers",
+              "path": "vote.allowNonBoardMembers",
+              "type": "boolean",
+              "source_type": "Boolean",
+              "label": {
+                "fi": "Salli taulun ulkopuoliset käyttäjät",
+                "en": "Allow non board members"
+              },
+              "help": {
+                "fi": "Salli taulun ulkopuoliset käyttäjät. Lähdekenttä: vote.allowNonBoardMembers.",
+                "en": "Allow non board members. Source field: vote.allowNonBoardMembers."
+              },
+              "group": "voting",
+              "readonly": false,
+              "localized": false,
+              "optional": false,
+              "has_default": true,
+              "default": false,
+              "allowed_values": [],
+              "source": "cards.js",
+              "children": [],
+              "source_line": 615
+            }
+          ],
+          "source_line": 573
+        },
+        {
+          "key": "poker",
+          "path": "poker",
+          "type": "object",
+          "source_type": "Object",
+          "label": {
+            "fi": "Suunnittelupokeri",
+            "en": "Planning poker"
+          },
+          "help": {
+            "fi": "Suunnittelupokeri. Lähdekenttä: poker.",
+            "en": "Planning poker. Source field: poker."
+          },
+          "group": "poker",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [
+            {
+              "key": "poker.question",
+              "path": "poker.question",
+              "type": "boolean",
+              "source_type": "Boolean",
+              "label": {
+                "fi": "Kysymys",
+                "en": "Question"
+              },
+              "help": {
+                "fi": "Kysymys. Lähdekenttä: poker.question.",
+                "en": "Question. Source field: poker.question."
+              },
+              "group": "poker",
+              "readonly": false,
+              "localized": false,
+              "optional": true,
+              "has_default": false,
+              "default": null,
+              "allowed_values": [],
+              "source": "cards.js",
+              "children": [],
+              "source_line": 626
+            },
+            {
+              "key": "poker.one",
+              "path": "poker.one",
+              "type": "array",
+              "source_type": "Array",
+              "label": {
+                "fi": "Yksi",
+                "en": "One"
+              },
+              "help": {
+                "fi": "Yksi. Lähdekenttä: poker.one.",
+                "en": "One. Source field: poker.one."
+              },
+              "group": "poker",
+              "readonly": false,
+              "localized": false,
+              "optional": true,
+              "has_default": false,
+              "default": null,
+              "allowed_values": [],
+              "source": "cards.js",
+              "children": [],
+              "items": {
+                "key": "poker.one.$",
+                "path": "poker.one.$",
+                "type": "string",
+                "source_type": "String",
+                "label": {
+                  "fi": "$",
+                  "en": "$"
+                },
+                "help": {
+                  "fi": "$. Lähdekenttä: poker.one.$.",
+                  "en": "$. Source field: poker.one.$."
+                },
+                "group": "poker",
+                "readonly": false,
+                "localized": false,
+                "optional": false,
+                "has_default": false,
+                "default": null,
+                "allowed_values": [],
+                "source": "cards.js",
+                "children": [],
+                "source_line": 637
+              },
+              "source_line": 630
+            },
+            {
+              "key": "poker.two",
+              "path": "poker.two",
+              "type": "array",
+              "source_type": "Array",
+              "label": {
+                "fi": "Kaksi",
+                "en": "Two"
+              },
+              "help": {
+                "fi": "Kaksi. Lähdekenttä: poker.two.",
+                "en": "Two. Source field: poker.two."
+              },
+              "group": "poker",
+              "readonly": false,
+              "localized": false,
+              "optional": true,
+              "has_default": false,
+              "default": null,
+              "allowed_values": [],
+              "source": "cards.js",
+              "children": [],
+              "items": {
+                "key": "poker.two.$",
+                "path": "poker.two.$",
+                "type": "string",
+                "source_type": "String",
+                "label": {
+                  "fi": "$",
+                  "en": "$"
+                },
+                "help": {
+                  "fi": "$. Lähdekenttä: poker.two.$.",
+                  "en": "$. Source field: poker.two.$."
+                },
+                "group": "poker",
+                "readonly": false,
+                "localized": false,
+                "optional": false,
+                "has_default": false,
+                "default": null,
+                "allowed_values": [],
+                "source": "cards.js",
+                "children": [],
+                "source_line": 647
+              },
+              "source_line": 640
+            },
+            {
+              "key": "poker.three",
+              "path": "poker.three",
+              "type": "array",
+              "source_type": "Array",
+              "label": {
+                "fi": "Kolme",
+                "en": "Three"
+              },
+              "help": {
+                "fi": "Kolme. Lähdekenttä: poker.three.",
+                "en": "Three. Source field: poker.three."
+              },
+              "group": "poker",
+              "readonly": false,
+              "localized": false,
+              "optional": true,
+              "has_default": false,
+              "default": null,
+              "allowed_values": [],
+              "source": "cards.js",
+              "children": [],
+              "items": {
+                "key": "poker.three.$",
+                "path": "poker.three.$",
+                "type": "string",
+                "source_type": "String",
+                "label": {
+                  "fi": "$",
+                  "en": "$"
+                },
+                "help": {
+                  "fi": "$. Lähdekenttä: poker.three.$.",
+                  "en": "$. Source field: poker.three.$."
+                },
+                "group": "poker",
+                "readonly": false,
+                "localized": false,
+                "optional": false,
+                "has_default": false,
+                "default": null,
+                "allowed_values": [],
+                "source": "cards.js",
+                "children": [],
+                "source_line": 657
+              },
+              "source_line": 650
+            },
+            {
+              "key": "poker.five",
+              "path": "poker.five",
+              "type": "array",
+              "source_type": "Array",
+              "label": {
+                "fi": "Viisi",
+                "en": "Five"
+              },
+              "help": {
+                "fi": "Viisi. Lähdekenttä: poker.five.",
+                "en": "Five. Source field: poker.five."
+              },
+              "group": "poker",
+              "readonly": false,
+              "localized": false,
+              "optional": true,
+              "has_default": false,
+              "default": null,
+              "allowed_values": [],
+              "source": "cards.js",
+              "children": [],
+              "items": {
+                "key": "poker.five.$",
+                "path": "poker.five.$",
+                "type": "string",
+                "source_type": "String",
+                "label": {
+                  "fi": "$",
+                  "en": "$"
+                },
+                "help": {
+                  "fi": "$. Lähdekenttä: poker.five.$.",
+                  "en": "$. Source field: poker.five.$."
+                },
+                "group": "poker",
+                "readonly": false,
+                "localized": false,
+                "optional": false,
+                "has_default": false,
+                "default": null,
+                "allowed_values": [],
+                "source": "cards.js",
+                "children": [],
+                "source_line": 667
+              },
+              "source_line": 660
+            },
+            {
+              "key": "poker.eight",
+              "path": "poker.eight",
+              "type": "array",
+              "source_type": "Array",
+              "label": {
+                "fi": "Kahdeksan",
+                "en": "Eight"
+              },
+              "help": {
+                "fi": "Kahdeksan. Lähdekenttä: poker.eight.",
+                "en": "Eight. Source field: poker.eight."
+              },
+              "group": "poker",
+              "readonly": false,
+              "localized": false,
+              "optional": true,
+              "has_default": false,
+              "default": null,
+              "allowed_values": [],
+              "source": "cards.js",
+              "children": [],
+              "items": {
+                "key": "poker.eight.$",
+                "path": "poker.eight.$",
+                "type": "string",
+                "source_type": "String",
+                "label": {
+                  "fi": "$",
+                  "en": "$"
+                },
+                "help": {
+                  "fi": "$. Lähdekenttä: poker.eight.$.",
+                  "en": "$. Source field: poker.eight.$."
+                },
+                "group": "poker",
+                "readonly": false,
+                "localized": false,
+                "optional": false,
+                "has_default": false,
+                "default": null,
+                "allowed_values": [],
+                "source": "cards.js",
+                "children": [],
+                "source_line": 677
+              },
+              "source_line": 670
+            },
+            {
+              "key": "poker.thirteen",
+              "path": "poker.thirteen",
+              "type": "array",
+              "source_type": "Array",
+              "label": {
+                "fi": "Kolmetoista",
+                "en": "Thirteen"
+              },
+              "help": {
+                "fi": "Kolmetoista. Lähdekenttä: poker.thirteen.",
+                "en": "Thirteen. Source field: poker.thirteen."
+              },
+              "group": "poker",
+              "readonly": false,
+              "localized": false,
+              "optional": true,
+              "has_default": false,
+              "default": null,
+              "allowed_values": [],
+              "source": "cards.js",
+              "children": [],
+              "items": {
+                "key": "poker.thirteen.$",
+                "path": "poker.thirteen.$",
+                "type": "string",
+                "source_type": "String",
+                "label": {
+                  "fi": "$",
+                  "en": "$"
+                },
+                "help": {
+                  "fi": "$. Lähdekenttä: poker.thirteen.$.",
+                  "en": "$. Source field: poker.thirteen.$."
+                },
+                "group": "poker",
+                "readonly": false,
+                "localized": false,
+                "optional": false,
+                "has_default": false,
+                "default": null,
+                "allowed_values": [],
+                "source": "cards.js",
+                "children": [],
+                "source_line": 687
+              },
+              "source_line": 680
+            },
+            {
+              "key": "poker.twenty",
+              "path": "poker.twenty",
+              "type": "array",
+              "source_type": "Array",
+              "label": {
+                "fi": "Kaksikymmentä",
+                "en": "Twenty"
+              },
+              "help": {
+                "fi": "Kaksikymmentä. Lähdekenttä: poker.twenty.",
+                "en": "Twenty. Source field: poker.twenty."
+              },
+              "group": "poker",
+              "readonly": false,
+              "localized": false,
+              "optional": true,
+              "has_default": false,
+              "default": null,
+              "allowed_values": [],
+              "source": "cards.js",
+              "children": [],
+              "items": {
+                "key": "poker.twenty.$",
+                "path": "poker.twenty.$",
+                "type": "string",
+                "source_type": "String",
+                "label": {
+                  "fi": "$",
+                  "en": "$"
+                },
+                "help": {
+                  "fi": "$. Lähdekenttä: poker.twenty.$.",
+                  "en": "$. Source field: poker.twenty.$."
+                },
+                "group": "poker",
+                "readonly": false,
+                "localized": false,
+                "optional": false,
+                "has_default": false,
+                "default": null,
+                "allowed_values": [],
+                "source": "cards.js",
+                "children": [],
+                "source_line": 697
+              },
+              "source_line": 690
+            },
+            {
+              "key": "poker.forty",
+              "path": "poker.forty",
+              "type": "array",
+              "source_type": "Array",
+              "label": {
+                "fi": "Neljäkymmentä",
+                "en": "Forty"
+              },
+              "help": {
+                "fi": "Neljäkymmentä. Lähdekenttä: poker.forty.",
+                "en": "Forty. Source field: poker.forty."
+              },
+              "group": "poker",
+              "readonly": false,
+              "localized": false,
+              "optional": true,
+              "has_default": false,
+              "default": null,
+              "allowed_values": [],
+              "source": "cards.js",
+              "children": [],
+              "items": {
+                "key": "poker.forty.$",
+                "path": "poker.forty.$",
+                "type": "string",
+                "source_type": "String",
+                "label": {
+                  "fi": "$",
+                  "en": "$"
+                },
+                "help": {
+                  "fi": "$. Lähdekenttä: poker.forty.$.",
+                  "en": "$. Source field: poker.forty.$."
+                },
+                "group": "poker",
+                "readonly": false,
+                "localized": false,
+                "optional": false,
+                "has_default": false,
+                "default": null,
+                "allowed_values": [],
+                "source": "cards.js",
+                "children": [],
+                "source_line": 707
+              },
+              "source_line": 700
+            },
+            {
+              "key": "poker.oneHundred",
+              "path": "poker.oneHundred",
+              "type": "array",
+              "source_type": "Array",
+              "label": {
+                "fi": "Sata",
+                "en": "One hundred"
+              },
+              "help": {
+                "fi": "Sata. Lähdekenttä: poker.oneHundred.",
+                "en": "One hundred. Source field: poker.oneHundred."
+              },
+              "group": "poker",
+              "readonly": false,
+              "localized": false,
+              "optional": true,
+              "has_default": false,
+              "default": null,
+              "allowed_values": [],
+              "source": "cards.js",
+              "children": [],
+              "items": {
+                "key": "poker.oneHundred.$",
+                "path": "poker.oneHundred.$",
+                "type": "string",
+                "source_type": "String",
+                "label": {
+                  "fi": "$",
+                  "en": "$"
+                },
+                "help": {
+                  "fi": "$. Lähdekenttä: poker.oneHundred.$.",
+                  "en": "$. Source field: poker.oneHundred.$."
+                },
+                "group": "poker",
+                "readonly": false,
+                "localized": false,
+                "optional": false,
+                "has_default": false,
+                "default": null,
+                "allowed_values": [],
+                "source": "cards.js",
+                "children": [],
+                "source_line": 717
+              },
+              "source_line": 710
+            },
+            {
+              "key": "poker.unsure",
+              "path": "poker.unsure",
+              "type": "array",
+              "source_type": "Array",
+              "label": {
+                "fi": "Epävarma",
+                "en": "Unsure"
+              },
+              "help": {
+                "fi": "Epävarma. Lähdekenttä: poker.unsure.",
+                "en": "Unsure. Source field: poker.unsure."
+              },
+              "group": "poker",
+              "readonly": false,
+              "localized": false,
+              "optional": true,
+              "has_default": false,
+              "default": null,
+              "allowed_values": [],
+              "source": "cards.js",
+              "children": [],
+              "items": {
+                "key": "poker.unsure.$",
+                "path": "poker.unsure.$",
+                "type": "string",
+                "source_type": "String",
+                "label": {
+                  "fi": "$",
+                  "en": "$"
+                },
+                "help": {
+                  "fi": "$. Lähdekenttä: poker.unsure.$.",
+                  "en": "$. Source field: poker.unsure.$."
+                },
+                "group": "poker",
+                "readonly": false,
+                "localized": false,
+                "optional": false,
+                "has_default": false,
+                "default": null,
+                "allowed_values": [],
+                "source": "cards.js",
+                "children": [],
+                "source_line": 727
+              },
+              "source_line": 720
+            },
+            {
+              "key": "poker.end",
+              "path": "poker.end",
+              "type": "date",
+              "source_type": "Date",
+              "label": {
+                "fi": "Päättyminen",
+                "en": "End"
+              },
+              "help": {
+                "fi": "Päättyminen. Lähdekenttä: poker.end.",
+                "en": "End. Source field: poker.end."
+              },
+              "group": "poker",
+              "readonly": false,
+              "localized": false,
+              "optional": true,
+              "has_default": false,
+              "default": null,
+              "allowed_values": [],
+              "source": "cards.js",
+              "children": [],
+              "source_line": 730
+            },
+            {
+              "key": "poker.allowNonBoardMembers",
+              "path": "poker.allowNonBoardMembers",
+              "type": "boolean",
+              "source_type": "Boolean",
+              "label": {
+                "fi": "Salli taulun ulkopuoliset käyttäjät",
+                "en": "Allow non board members"
+              },
+              "help": {
+                "fi": "Salli taulun ulkopuoliset käyttäjät. Lähdekenttä: poker.allowNonBoardMembers.",
+                "en": "Allow non board members. Source field: poker.allowNonBoardMembers."
+              },
+              "group": "poker",
+              "readonly": false,
+              "localized": false,
+              "optional": true,
+              "has_default": false,
+              "default": null,
+              "allowed_values": [],
+              "source": "cards.js",
+              "children": [],
+              "source_line": 734
+            },
+            {
+              "key": "poker.estimation",
+              "path": "poker.estimation",
+              "type": "number",
+              "source_type": "Number",
+              "label": {
+                "fi": "Arvio",
+                "en": "Estimation"
+              },
+              "help": {
+                "fi": "Arvio. Lähdekenttä: poker.estimation.",
+                "en": "Estimation. Source field: poker.estimation."
+              },
+              "group": "poker",
+              "readonly": false,
+              "localized": false,
+              "optional": true,
+              "has_default": false,
+              "default": null,
+              "allowed_values": [],
+              "source": "cards.js",
+              "children": [],
+              "source_line": 738
+            }
+          ],
+          "source_line": 619
+        },
+        {
+          "key": "targetId_gantt",
+          "path": "targetId_gantt",
+          "type": "array",
+          "source_type": "Array",
+          "label": {
+            "fi": "Gantt-kohdekortit",
+            "en": "Gantt target card IDs"
+          },
+          "help": {
+            "fi": "Gantt-kohdekortit. Lähdekenttä: targetId_gantt.",
+            "en": "Gantt target card IDs. Source field: targetId_gantt."
+          },
+          "group": "dependencies",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": true,
+          "default": [],
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "items": {
+            "key": "targetId_gantt.$",
+            "path": "targetId_gantt.$",
+            "type": "string",
+            "source_type": "String",
+            "label": {
+              "fi": "$",
+              "en": "$"
+            },
+            "help": {
+              "fi": "$. Lähdekenttä: targetId_gantt.$.",
+              "en": "$. Source field: targetId_gantt.$."
+            },
+            "group": "dependencies",
+            "readonly": false,
+            "localized": false,
+            "optional": false,
+            "has_default": false,
+            "default": null,
+            "allowed_values": [],
+            "source": "cards.js",
+            "children": [],
+            "source_line": 753
+          },
+          "source_line": 745
+        },
+        {
+          "key": "linkType_gantt",
+          "path": "linkType_gantt",
+          "type": "array",
+          "source_type": "Array",
+          "label": {
+            "fi": "Gantt-linkkityypit",
+            "en": "Gantt link types"
+          },
+          "help": {
+            "fi": "Gantt-linkkityypit. Lähdekenttä: linkType_gantt.",
+            "en": "Gantt link types. Source field: linkType_gantt."
+          },
+          "group": "dependencies",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": true,
+          "default": [],
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "items": {
+            "key": "linkType_gantt.$",
+            "path": "linkType_gantt.$",
+            "type": "number",
+            "source_type": "Number",
+            "label": {
+              "fi": "$",
+              "en": "$"
+            },
+            "help": {
+              "fi": "$. Lähdekenttä: linkType_gantt.$.",
+              "en": "$. Source field: linkType_gantt.$."
+            },
+            "group": "dependencies",
+            "readonly": false,
+            "localized": false,
+            "optional": false,
+            "has_default": false,
+            "default": null,
+            "allowed_values": [],
+            "source": "cards.js",
+            "children": [],
+            "source_line": 764
+          },
+          "source_line": 756
+        },
+        {
+          "key": "linkId_gantt",
+          "path": "linkId_gantt",
+          "type": "array",
+          "source_type": "Array",
+          "label": {
+            "fi": "Gantt-linkkien tunnisteet",
+            "en": "Gantt link IDs"
+          },
+          "help": {
+            "fi": "Gantt-linkkien tunnisteet. Lähdekenttä: linkId_gantt.",
+            "en": "Gantt link IDs. Source field: linkId_gantt."
+          },
+          "group": "dependencies",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": true,
+          "default": [],
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "items": {
+            "key": "linkId_gantt.$",
+            "path": "linkId_gantt.$",
+            "type": "string",
+            "source_type": "String",
+            "label": {
+              "fi": "$",
+              "en": "$"
+            },
+            "help": {
+              "fi": "$. Lähdekenttä: linkId_gantt.$.",
+              "en": "$. Source field: linkId_gantt.$."
+            },
+            "group": "dependencies",
+            "readonly": false,
+            "localized": false,
+            "optional": false,
+            "has_default": false,
+            "default": null,
+            "allowed_values": [],
+            "source": "cards.js",
+            "children": [],
+            "source_line": 775
+          },
+          "source_line": 767
+        },
+        {
+          "key": "cardNumber",
+          "path": "cardNumber",
+          "type": "number",
+          "source_type": "Number",
+          "label": {
+            "fi": "Kortin numero",
+            "en": "Card number"
+          },
+          "help": {
+            "fi": "Kortin numero. Lähdekenttä: cardNumber.",
+            "en": "Card number. Source field: cardNumber."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": true,
+          "default": 0,
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "source_line": 778
+        },
+        {
+          "key": "showActivities",
+          "path": "showActivities",
+          "type": "boolean",
+          "source_type": "Boolean",
+          "label": {
+            "fi": "Näytä tapahtumat",
+            "en": "Show activities"
+          },
+          "help": {
+            "fi": "Näytä tapahtumat. Lähdekenttä: showActivities.",
+            "en": "Show activities. Source field: showActivities."
+          },
+          "group": "appearance",
+          "readonly": false,
+          "localized": false,
+          "optional": false,
+          "has_default": true,
+          "default": false,
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "source_line": 787
+        },
+        {
+          "key": "showListOnMinicard",
+          "path": "showListOnMinicard",
+          "type": "boolean",
+          "source_type": "Boolean",
+          "label": {
+            "fi": "Näytä lista pienkortissa",
+            "en": "Show list on minicard"
+          },
+          "help": {
+            "fi": "Näytä lista pienkortissa. Lähdekenttä: showListOnMinicard.",
+            "en": "Show list on minicard. Source field: showListOnMinicard."
+          },
+          "group": "appearance",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": true,
+          "default": false,
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "source_line": 791
+        },
+        {
+          "key": "showChecklistAtMinicard",
+          "path": "showChecklistAtMinicard",
+          "type": "boolean",
+          "source_type": "Boolean",
+          "label": {
+            "fi": "Näytä tarkistuslista pienkortissa",
+            "en": "Show checklist on minicard"
+          },
+          "help": {
+            "fi": "Näytä tarkistuslista pienkortissa. Lähdekenttä: showChecklistAtMinicard.",
+            "en": "Show checklist on minicard. Source field: showChecklistAtMinicard."
+          },
+          "group": "appearance",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": true,
+          "default": false,
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "source_line": 799
+        },
+        {
+          "key": "hideFinishedChecklistIfItemsAreHidden",
+          "path": "hideFinishedChecklistIfItemsAreHidden",
+          "type": "boolean",
+          "source_type": "Boolean",
+          "label": {
+            "fi": "Piilota valmiit piilotettujen kohtien tarkistuslistat",
+            "en": "Hide completed checklist when items are hidden"
+          },
+          "help": {
+            "fi": "Piilota valmiit piilotettujen kohtien tarkistuslistat. Lähdekenttä: hideFinishedChecklistIfItemsAreHidden.",
+            "en": "Hide completed checklist when items are hidden. Source field: hideFinishedChecklistIfItemsAreHidden."
+          },
+          "group": "appearance",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": true,
+          "default": false,
+          "allowed_values": [],
+          "source": "cards.js",
+          "children": [],
+          "source_line": 807
+        },
+        {
+          "key": "watchers",
+          "path": "watchers",
+          "type": "array",
+          "source_type": "Array",
+          "label": {
+            "fi": "Seuraajien tunnisteet",
+            "en": "Watcher user IDs"
+          },
+          "help": {
+            "fi": "Watchers. Lähdekenttä: watchers.",
+            "en": "Watchers. Source field: watchers."
+          },
+          "group": "people",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "watchable.js",
+          "children": [],
+          "items": {
+            "key": "watchers.$",
+            "path": "watchers.$",
+            "type": "string",
+            "source_type": "String",
+            "label": {
+              "fi": "$",
+              "en": "$"
+            },
+            "help": {
+              "fi": "$. Lähdekenttä: watchers.$.",
+              "en": "$. Source field: watchers.$."
+            },
+            "group": "advanced",
+            "readonly": false,
+            "localized": false,
+            "optional": false,
+            "has_default": false,
+            "default": null,
+            "allowed_values": [],
+            "source": "watchable.js",
+            "children": [],
+            "source_line": 12
+          },
+          "source_line": 8
+        },
+        {
+          "key": "priority",
+          "path": "priority",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Prioriteetti",
+            "en": "Priority"
+          },
+          "help": {
+            "fi": "Pelin prioriteettikenttä; tätä kenttää ei määritelty toimitetussa cards.js-tiedostossa.",
+            "en": "Game priority extension; this field is not declared in the supplied cards.js."
+          },
+          "group": "workflow",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": true,
+          "default": "normal",
+          "allowed_values": [
+            "low",
+            "normal",
+            "high",
+            "urgent"
+          ],
+          "source": "game extension",
+          "children": [],
+          "extension": true,
+          "allowed_labels": {
+            "fi": [
+              "Matala",
+              "Normaali",
+              "Korkea",
+              "Kiireellinen"
+            ],
+            "en": [
+              "Low",
+              "Normal",
+              "High",
+              "Urgent"
+            ]
+          }
+        }
+      ]
+    },
+    "checklists": {
+      "name": "checklists",
+      "source": "checklists.js",
+      "schema_declared": true,
+      "fields": [
+        {
+          "key": "cardId",
+          "path": "cardId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Kortin tunniste",
+            "en": "Card id"
+          },
+          "help": {
+            "fi": "Kortin tunniste. Lähdekenttä: cardId.",
+            "en": "Card id. Source field: cardId."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": false,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "checklists.js",
+          "children": []
+        },
+        {
+          "key": "boardId",
+          "path": "boardId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Taulun tunniste",
+            "en": "Board id"
+          },
+          "help": {
+            "fi": "Taulun tunniste. Lähdekenttä: boardId.",
+            "en": "Board id. Source field: boardId."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "checklists.js",
+          "children": []
+        },
+        {
+          "key": "title",
+          "path": "title",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Otsikko",
+            "en": "Title"
+          },
+          "help": {
+            "fi": "Otsikko. Lähdekenttä: title.",
+            "en": "Title. Source field: title."
+          },
+          "group": "basic",
+          "readonly": false,
+          "localized": true,
+          "optional": false,
+          "has_default": true,
+          "default": "Checklist",
+          "allowed_values": [],
+          "source": "checklists.js",
+          "children": []
+        },
+        {
+          "key": "finishedAt",
+          "path": "finishedAt",
+          "type": "date",
+          "source_type": "Date",
+          "label": {
+            "fi": "Valmistunut",
+            "en": "Finished at"
+          },
+          "help": {
+            "fi": "Valmistunut. Lähdekenttä: finishedAt.",
+            "en": "Finished at. Source field: finishedAt."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "checklists.js",
+          "children": []
+        },
+        {
+          "key": "createdAt",
+          "path": "createdAt",
+          "type": "date",
+          "source_type": "Date",
+          "label": {
+            "fi": "Luotu",
+            "en": "Created at"
+          },
+          "help": {
+            "fi": "Luotu. Lähdekenttä: createdAt.",
+            "en": "Created at. Source field: createdAt."
+          },
+          "group": "dates",
+          "readonly": true,
+          "localized": false,
+          "optional": false,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "checklists.js",
+          "children": [],
+          "auto_value": true
+        },
+        {
+          "key": "modifiedAt",
+          "path": "modifiedAt",
+          "type": "date",
+          "source_type": "Date",
+          "label": {
+            "fi": "Muokattu",
+            "en": "Modified at"
+          },
+          "help": {
+            "fi": "Muokattu. Lähdekenttä: modifiedAt.",
+            "en": "Modified at. Source field: modifiedAt."
+          },
+          "group": "dates",
+          "readonly": true,
+          "localized": false,
+          "optional": false,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "checklists.js",
+          "children": [],
+          "auto_value": true
+        },
+        {
+          "key": "sort",
+          "path": "sort",
+          "type": "number",
+          "source_type": "Number",
+          "label": {
+            "fi": "Järjestys",
+            "en": "Sort"
+          },
+          "help": {
+            "fi": "Järjestys. Lähdekenttä: sort.",
+            "en": "Sort. Source field: sort."
+          },
+          "group": "advanced",
+          "readonly": false,
+          "localized": false,
+          "optional": false,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "checklists.js",
+          "children": []
+        },
+        {
+          "key": "hideCheckedChecklistItems",
+          "path": "hideCheckedChecklistItems",
+          "type": "boolean",
+          "source_type": "Boolean",
+          "label": {
+            "fi": "Piilota valmiit kohdat",
+            "en": "Hide checked checklist items"
+          },
+          "help": {
+            "fi": "Piilota valmiit kohdat. Lähdekenttä: hideCheckedChecklistItems.",
+            "en": "Hide checked checklist items. Source field: hideCheckedChecklistItems."
+          },
+          "group": "advanced",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "checklists.js",
+          "children": []
+        },
+        {
+          "key": "hideAllChecklistItems",
+          "path": "hideAllChecklistItems",
+          "type": "boolean",
+          "source_type": "Boolean",
+          "label": {
+            "fi": "Piilota kaikki kohdat",
+            "en": "Hide all checklist items"
+          },
+          "help": {
+            "fi": "Piilota kaikki kohdat. Lähdekenttä: hideAllChecklistItems.",
+            "en": "Hide all checklist items. Source field: hideAllChecklistItems."
+          },
+          "group": "advanced",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "checklists.js",
+          "children": []
+        },
+        {
+          "key": "showChecklistAtMinicard",
+          "path": "showChecklistAtMinicard",
+          "type": "boolean",
+          "source_type": "Boolean",
+          "label": {
+            "fi": "Näytä tarkistuslista pienkortissa",
+            "en": "Show checklist on minicard"
+          },
+          "help": {
+            "fi": "Näytä tarkistuslista pienkortissa. Lähdekenttä: showChecklistAtMinicard.",
+            "en": "Show checklist on minicard. Source field: showChecklistAtMinicard."
+          },
+          "group": "appearance",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "checklists.js",
+          "children": []
+        }
+      ]
+    },
+    "checklistItems": {
+      "name": "checklistItems",
+      "source": "checklistItems.js",
+      "schema_declared": true,
+      "fields": [
+        {
+          "key": "title",
+          "path": "title",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Otsikko",
+            "en": "Title"
+          },
+          "help": {
+            "fi": "Otsikko. Lähdekenttä: title.",
+            "en": "Title. Source field: title."
+          },
+          "group": "basic",
+          "readonly": false,
+          "localized": true,
+          "optional": false,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "checklistItems.js",
+          "children": []
+        },
+        {
+          "key": "sort",
+          "path": "sort",
+          "type": "number",
+          "source_type": "Number",
+          "label": {
+            "fi": "Järjestys",
+            "en": "Sort"
+          },
+          "help": {
+            "fi": "Järjestys. Lähdekenttä: sort.",
+            "en": "Sort. Source field: sort."
+          },
+          "group": "advanced",
+          "readonly": false,
+          "localized": false,
+          "optional": false,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "checklistItems.js",
+          "children": []
+        },
+        {
+          "key": "isFinished",
+          "path": "isFinished",
+          "type": "boolean",
+          "source_type": "Boolean",
+          "label": {
+            "fi": "Valmis",
+            "en": "Is finished"
+          },
+          "help": {
+            "fi": "Valmis. Lähdekenttä: isFinished.",
+            "en": "Is finished. Source field: isFinished."
+          },
+          "group": "advanced",
+          "readonly": false,
+          "localized": false,
+          "optional": false,
+          "has_default": true,
+          "default": false,
+          "allowed_values": [],
+          "source": "checklistItems.js",
+          "children": []
+        },
+        {
+          "key": "checklistId",
+          "path": "checklistId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Tarkistuslistan tunniste",
+            "en": "Checklist id"
+          },
+          "help": {
+            "fi": "Tarkistuslistan tunniste. Lähdekenttä: checklistId.",
+            "en": "Checklist id. Source field: checklistId."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": false,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "checklistItems.js",
+          "children": []
+        },
+        {
+          "key": "cardId",
+          "path": "cardId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Kortin tunniste",
+            "en": "Card id"
+          },
+          "help": {
+            "fi": "Kortin tunniste. Lähdekenttä: cardId.",
+            "en": "Card id. Source field: cardId."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": false,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "checklistItems.js",
+          "children": []
+        },
+        {
+          "key": "boardId",
+          "path": "boardId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Taulun tunniste",
+            "en": "Board id"
+          },
+          "help": {
+            "fi": "Taulun tunniste. Lähdekenttä: boardId.",
+            "en": "Board id. Source field: boardId."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "checklistItems.js",
+          "children": []
+        },
+        {
+          "key": "createdAt",
+          "path": "createdAt",
+          "type": "date",
+          "source_type": "Date",
+          "label": {
+            "fi": "Luotu",
+            "en": "Created at"
+          },
+          "help": {
+            "fi": "Luotu. Lähdekenttä: createdAt.",
+            "en": "Created at. Source field: createdAt."
+          },
+          "group": "dates",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "checklistItems.js",
+          "children": [],
+          "auto_value": true
+        },
+        {
+          "key": "modifiedAt",
+          "path": "modifiedAt",
+          "type": "date",
+          "source_type": "Date",
+          "label": {
+            "fi": "Muokattu",
+            "en": "Modified at"
+          },
+          "help": {
+            "fi": "Muokattu. Lähdekenttä: modifiedAt.",
+            "en": "Modified at. Source field: modifiedAt."
+          },
+          "group": "dates",
+          "readonly": true,
+          "localized": false,
+          "optional": false,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "checklistItems.js",
+          "children": [],
+          "auto_value": true
+        }
+      ]
+    },
+    "cardComments": {
+      "name": "cardComments",
+      "source": "cardComments.js",
+      "schema_declared": true,
+      "fields": [
+        {
+          "key": "boardId",
+          "path": "boardId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Taulun tunniste",
+            "en": "Board id"
+          },
+          "help": {
+            "fi": "Taulun tunniste. Lähdekenttä: boardId.",
+            "en": "Board id. Source field: boardId."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": false,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "cardComments.js",
+          "children": []
+        },
+        {
+          "key": "cardId",
+          "path": "cardId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Kortin tunniste",
+            "en": "Card id"
+          },
+          "help": {
+            "fi": "Kortin tunniste. Lähdekenttä: cardId.",
+            "en": "Card id. Source field: cardId."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": false,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "cardComments.js",
+          "children": []
+        },
+        {
+          "key": "text",
+          "path": "text",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Teksti",
+            "en": "Text"
+          },
+          "help": {
+            "fi": "Teksti. Lähdekenttä: text.",
+            "en": "Text. Source field: text."
+          },
+          "group": "advanced",
+          "readonly": false,
+          "localized": true,
+          "optional": false,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "cardComments.js",
+          "children": []
+        },
+        {
+          "key": "parentId",
+          "path": "parentId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Yläkortin tunniste",
+            "en": "Parent id"
+          },
+          "help": {
+            "fi": "Yläkortin tunniste. Lähdekenttä: parentId.",
+            "en": "Parent id. Source field: parentId."
+          },
+          "group": "workflow",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": true,
+          "default": "",
+          "allowed_values": [],
+          "source": "cardComments.js",
+          "children": []
+        },
+        {
+          "key": "createdAt",
+          "path": "createdAt",
+          "type": "date",
+          "source_type": "Date",
+          "label": {
+            "fi": "Luotu",
+            "en": "Created at"
+          },
+          "help": {
+            "fi": "Luotu. Lähdekenttä: createdAt.",
+            "en": "Created at. Source field: createdAt."
+          },
+          "group": "dates",
+          "readonly": true,
+          "localized": false,
+          "optional": false,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "cardComments.js",
+          "children": [],
+          "auto_value": true
+        },
+        {
+          "key": "modifiedAt",
+          "path": "modifiedAt",
+          "type": "date",
+          "source_type": "Date",
+          "label": {
+            "fi": "Muokattu",
+            "en": "Modified at"
+          },
+          "help": {
+            "fi": "Muokattu. Lähdekenttä: modifiedAt.",
+            "en": "Modified at. Source field: modifiedAt."
+          },
+          "group": "dates",
+          "readonly": true,
+          "localized": false,
+          "optional": false,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "cardComments.js",
+          "children": [],
+          "auto_value": true
+        },
+        {
+          "key": "userId",
+          "path": "userId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Tekijän tunniste",
+            "en": "Author user ID"
+          },
+          "help": {
+            "fi": "Tekijän tunniste. Lähdekenttä: userId.",
+            "en": "Author user ID. Source field: userId."
+          },
+          "group": "people",
+          "readonly": true,
+          "localized": false,
+          "optional": false,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "cardComments.js",
+          "children": [],
+          "auto_value": true
+        }
+      ]
+    },
+    "cardCommentReactions": {
+      "name": "cardCommentReactions",
+      "source": "cardCommentReactions.js",
+      "schema_declared": true,
+      "fields": [
+        {
+          "key": "boardId",
+          "path": "boardId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Taulun tunniste",
+            "en": "Board id"
+          },
+          "help": {
+            "fi": "Taulun tunniste. Lähdekenttä: boardId.",
+            "en": "Board id. Source field: boardId."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": false,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "cardCommentReactions.js",
+          "children": []
+        },
+        {
+          "key": "cardId",
+          "path": "cardId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Kortin tunniste",
+            "en": "Card id"
+          },
+          "help": {
+            "fi": "Kortin tunniste. Lähdekenttä: cardId.",
+            "en": "Card id. Source field: cardId."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": false,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "cardCommentReactions.js",
+          "children": []
+        },
+        {
+          "key": "cardCommentId",
+          "path": "cardCommentId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Kommentin tunniste",
+            "en": "Card comment id"
+          },
+          "help": {
+            "fi": "Kommentin tunniste. Lähdekenttä: cardCommentId.",
+            "en": "Card comment id. Source field: cardCommentId."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": false,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "cardCommentReactions.js",
+          "children": []
+        },
+        {
+          "key": "reactions",
+          "path": "reactions",
+          "type": "array",
+          "source_type": "Array",
+          "label": {
+            "fi": "Reaktiot",
+            "en": "Reactions"
+          },
+          "help": {
+            "fi": "Reaktiot. Lähdekenttä: reactions.",
+            "en": "Reactions. Source field: reactions."
+          },
+          "group": "advanced",
+          "readonly": false,
+          "localized": false,
+          "optional": false,
+          "has_default": true,
+          "default": [],
+          "allowed_values": [],
+          "source": "cardCommentReactions.js",
+          "children": [],
+          "items": {
+            "key": "reactions.$",
+            "path": "reactions.$",
+            "type": "object",
+            "source_type": "commentReactionSchema",
+            "label": {
+              "fi": "$",
+              "en": "$"
+            },
+            "help": {
+              "fi": "$. Lähdekenttä: reactions.$.",
+              "en": "$. Source field: reactions.$."
+            },
+            "group": "advanced",
+            "readonly": false,
+            "localized": false,
+            "optional": false,
+            "has_default": false,
+            "default": null,
+            "allowed_values": [],
+            "source": "cardCommentReactions.js",
+            "children": [
+              {
+                "key": "reactionCodepoint",
+                "path": "reactions.$.reactionCodepoint",
+                "type": "string",
+                "source_type": "String",
+                "label": {
+                  "fi": "Reaktion merkkikoodi",
+                  "en": "Reaction codepoint"
+                },
+                "help": {
+                  "fi": "Reaktion merkkikoodi. Lähdekenttä: reactions.$.reactionCodepoint.",
+                  "en": "Reaction codepoint. Source field: reactions.$.reactionCodepoint."
+                },
+                "group": "advanced",
+                "readonly": false,
+                "localized": false,
+                "optional": false,
+                "has_default": false,
+                "default": null,
+                "allowed_values": [],
+                "source": "cardCommentReactions.js",
+                "children": [],
+                "max": 9,
+                "pattern": "^&#\\d{4,6};$"
+              },
+              {
+                "key": "userIds",
+                "path": "reactions.$.userIds",
+                "type": "array",
+                "source_type": "Array",
+                "label": {
+                  "fi": "Käyttäjien tunnisteet",
+                  "en": "User ids"
+                },
+                "help": {
+                  "fi": "Käyttäjien tunnisteet. Lähdekenttä: reactions.$.userIds.",
+                  "en": "User ids. Source field: reactions.$.userIds."
+                },
+                "group": "advanced",
+                "readonly": false,
+                "localized": false,
+                "optional": false,
+                "has_default": true,
+                "default": [],
+                "allowed_values": [],
+                "source": "cardCommentReactions.js",
+                "children": [],
+                "items": {
+                  "key": "userIds.$",
+                  "path": "reactions.$.userIds.$",
+                  "type": "string",
+                  "source_type": "String",
+                  "label": {
+                    "fi": "$",
+                    "en": "$"
+                  },
+                  "help": {
+                    "fi": "$. Lähdekenttä: reactions.$.userIds.$.",
+                    "en": "$. Source field: reactions.$.userIds.$."
+                  },
+                  "group": "advanced",
+                  "readonly": false,
+                  "localized": false,
+                  "optional": false,
+                  "has_default": false,
+                  "default": null,
+                  "allowed_values": [],
+                  "source": "cardCommentReactions.js",
+                  "children": []
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "attachments": {
+      "name": "attachments",
+      "source": "attachments.js, attachments.server.js",
+      "schema_declared": false,
+      "open_schema": true,
+      "note": "FilesCollection has no attached SimpleSchema in supplied source. These are observed file/metadata properties, not an exhaustive library schema. Binary payload is separate from card metadata.",
+      "fields": [
+        {
+          "key": "_id",
+          "path": "_id",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Kortin tunniste",
+            "en": "Card ID"
+          },
+          "help": {
+            "fi": "Kortin tunniste. Lähdekenttä: _id.",
+            "en": "Card ID. Source field: _id."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "attachments.js",
+          "children": [],
+          "observed_only": true
+        },
+        {
+          "key": "name",
+          "path": "name",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Nimi",
+            "en": "Name"
+          },
+          "help": {
+            "fi": "Nimi. Lähdekenttä: name.",
+            "en": "Name. Source field: name."
+          },
+          "group": "advanced",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "attachments.js",
+          "children": [],
+          "observed_only": true
+        },
+        {
+          "key": "type",
+          "path": "type",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Tyyppi",
+            "en": "Card type"
+          },
+          "help": {
+            "fi": "Tyyppi. Lähdekenttä: type.",
+            "en": "Card type. Source field: type."
+          },
+          "group": "workflow",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "attachments.js",
+          "children": [],
+          "validation_note": "Source allowedValues is commented out; TYPE_CARD default is imported, not defined in supplied files.",
+          "observed_only": true
+        },
+        {
+          "key": "extension",
+          "path": "extension",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Tiedostopääte",
+            "en": "Extension"
+          },
+          "help": {
+            "fi": "Tiedostopääte. Lähdekenttä: extension.",
+            "en": "Extension. Source field: extension."
+          },
+          "group": "advanced",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "attachments.js",
+          "children": [],
+          "observed_only": true
+        },
+        {
+          "key": "extensionWithDot",
+          "path": "extensionWithDot",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Tiedostopääte pisteellä",
+            "en": "Extension with dot"
+          },
+          "help": {
+            "fi": "Tiedostopääte pisteellä. Lähdekenttä: extensionWithDot.",
+            "en": "Extension with dot. Source field: extensionWithDot."
+          },
+          "group": "advanced",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "attachments.js",
+          "children": [],
+          "observed_only": true
+        },
+        {
+          "key": "userId",
+          "path": "userId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Tekijän tunniste",
+            "en": "Author user ID"
+          },
+          "help": {
+            "fi": "Tekijän tunniste. Lähdekenttä: userId.",
+            "en": "Author user ID. Source field: userId."
+          },
+          "group": "people",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "attachments.js",
+          "children": [],
+          "observed_only": true
+        },
+        {
+          "key": "meta",
+          "path": "meta",
+          "type": "object",
+          "source_type": "Object",
+          "label": {
+            "fi": "Metatiedot",
+            "en": "Meta"
+          },
+          "help": {
+            "fi": "Metatiedot. Lähdekenttä: meta.",
+            "en": "Meta. Source field: meta."
+          },
+          "group": "advanced",
+          "readonly": false,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "attachments.js",
+          "children": [
+            {
+              "key": "boardId",
+              "path": "meta.boardId",
+              "type": "string",
+              "source_type": "String",
+              "label": {
+                "fi": "Taulun tunniste",
+                "en": "Board id"
+              },
+              "help": {
+                "fi": "Taulun tunniste. Lähdekenttä: boardId.",
+                "en": "Board id. Source field: boardId."
+              },
+              "group": "advanced",
+              "readonly": true,
+              "localized": false,
+              "optional": true,
+              "has_default": false,
+              "default": null,
+              "allowed_values": [],
+              "source": "attachments.js",
+              "children": [],
+              "observed_only": true
+            },
+            {
+              "key": "cardId",
+              "path": "meta.cardId",
+              "type": "string",
+              "source_type": "String",
+              "label": {
+                "fi": "Kortin tunniste",
+                "en": "Card id"
+              },
+              "help": {
+                "fi": "Kortin tunniste. Lähdekenttä: cardId.",
+                "en": "Card id. Source field: cardId."
+              },
+              "group": "advanced",
+              "readonly": true,
+              "localized": false,
+              "optional": true,
+              "has_default": false,
+              "default": null,
+              "allowed_values": [],
+              "source": "attachments.js",
+              "children": [],
+              "observed_only": true
+            },
+            {
+              "key": "listId",
+              "path": "meta.listId",
+              "type": "string",
+              "source_type": "String",
+              "label": {
+                "fi": "Listan tunniste",
+                "en": "List id"
+              },
+              "help": {
+                "fi": "Listan tunniste. Lähdekenttä: listId.",
+                "en": "List id. Source field: listId."
+              },
+              "group": "advanced",
+              "readonly": true,
+              "localized": false,
+              "optional": true,
+              "has_default": false,
+              "default": null,
+              "allowed_values": [],
+              "source": "attachments.js",
+              "children": [],
+              "observed_only": true
+            },
+            {
+              "key": "swimlaneId",
+              "path": "meta.swimlaneId",
+              "type": "string",
+              "source_type": "String",
+              "label": {
+                "fi": "Uimaradan tunniste",
+                "en": "Swimlane id"
+              },
+              "help": {
+                "fi": "Uimaradan tunniste. Lähdekenttä: swimlaneId.",
+                "en": "Swimlane id. Source field: swimlaneId."
+              },
+              "group": "advanced",
+              "readonly": true,
+              "localized": false,
+              "optional": true,
+              "has_default": false,
+              "default": null,
+              "allowed_values": [],
+              "source": "attachments.js",
+              "children": [],
+              "observed_only": true
+            }
+          ],
+          "observed_only": true
+        },
+        {
+          "key": "versions",
+          "path": "versions",
+          "type": "object",
+          "source_type": "Object",
+          "label": {
+            "fi": "Tiedostoversiot",
+            "en": "Versions"
+          },
+          "help": {
+            "fi": "Tiedostoversiot. Lähdekenttä: versions.",
+            "en": "Versions. Source field: versions."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "attachments.js",
+          "children": [],
+          "observed_only": true
+        }
+      ]
+    },
+    "activities": {
+      "name": "activities",
+      "source": "activities.js",
+      "schema_declared": false,
+      "open_schema": true,
+      "note": "Source explicitly has no schema: trusted server events contain event-specific fields. Observed references and timestamp hooks are listed; preserve extra fields.",
+      "fields": [
+        {
+          "key": "_id",
+          "path": "_id",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Kortin tunniste",
+            "en": "Card ID"
+          },
+          "help": {
+            "fi": "Kortin tunniste. Lähdekenttä: _id.",
+            "en": "Card ID. Source field: _id."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "activities.js",
+          "children": [],
+          "observed_only": true
+        },
+        {
+          "key": "activityType",
+          "path": "activityType",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Tapahtumatyyppi",
+            "en": "Activity type"
+          },
+          "help": {
+            "fi": "Tapahtumatyyppi. Lähdekenttä: activityType.",
+            "en": "Activity type. Source field: activityType."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "attachments.js",
+          "children": [],
+          "observed_only": true
+        },
+        {
+          "key": "type",
+          "path": "type",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Tyyppi",
+            "en": "Card type"
+          },
+          "help": {
+            "fi": "Tyyppi. Lähdekenttä: type.",
+            "en": "Card type. Source field: type."
+          },
+          "group": "workflow",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "attachments.js",
+          "children": [],
+          "validation_note": "Source allowedValues is commented out; TYPE_CARD default is imported, not defined in supplied files.",
+          "observed_only": true
+        },
+        {
+          "key": "userId",
+          "path": "userId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Tekijän tunniste",
+            "en": "Author user ID"
+          },
+          "help": {
+            "fi": "Tekijän tunniste. Lähdekenttä: userId.",
+            "en": "Author user ID. Source field: userId."
+          },
+          "group": "people",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "attachments.js",
+          "children": [],
+          "observed_only": true
+        },
+        {
+          "key": "boardId",
+          "path": "boardId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Taulun tunniste",
+            "en": "Board id"
+          },
+          "help": {
+            "fi": "Taulun tunniste. Lähdekenttä: boardId.",
+            "en": "Board id. Source field: boardId."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "activities.js",
+          "children": [],
+          "observed_only": true
+        },
+        {
+          "key": "oldBoardId",
+          "path": "oldBoardId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Aiemman taulun tunniste",
+            "en": "Old board id"
+          },
+          "help": {
+            "fi": "Aiemman taulun tunniste. Lähdekenttä: oldBoardId.",
+            "en": "Old board id. Source field: oldBoardId."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "activities.js",
+          "children": [],
+          "observed_only": true
+        },
+        {
+          "key": "cardId",
+          "path": "cardId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Kortin tunniste",
+            "en": "Card id"
+          },
+          "help": {
+            "fi": "Kortin tunniste. Lähdekenttä: cardId.",
+            "en": "Card id. Source field: cardId."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "activities.js",
+          "children": [],
+          "observed_only": true
+        },
+        {
+          "key": "listId",
+          "path": "listId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Listan tunniste",
+            "en": "List id"
+          },
+          "help": {
+            "fi": "Listan tunniste. Lähdekenttä: listId.",
+            "en": "List id. Source field: listId."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "activities.js",
+          "children": [],
+          "observed_only": true
+        },
+        {
+          "key": "oldListId",
+          "path": "oldListId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Aiemman listan tunniste",
+            "en": "Old list id"
+          },
+          "help": {
+            "fi": "Aiemman listan tunniste. Lähdekenttä: oldListId.",
+            "en": "Old list id. Source field: oldListId."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "activities.js",
+          "children": [],
+          "observed_only": true
+        },
+        {
+          "key": "swimlaneId",
+          "path": "swimlaneId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Uimaradan tunniste",
+            "en": "Swimlane id"
+          },
+          "help": {
+            "fi": "Uimaradan tunniste. Lähdekenttä: swimlaneId.",
+            "en": "Swimlane id. Source field: swimlaneId."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "activities.js",
+          "children": [],
+          "observed_only": true
+        },
+        {
+          "key": "oldSwimlaneId",
+          "path": "oldSwimlaneId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Aiemman uimaradan tunniste",
+            "en": "Old swimlane id"
+          },
+          "help": {
+            "fi": "Aiemman uimaradan tunniste. Lähdekenttä: oldSwimlaneId.",
+            "en": "Old swimlane id. Source field: oldSwimlaneId."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "activities.js",
+          "children": [],
+          "observed_only": true
+        },
+        {
+          "key": "memberId",
+          "path": "memberId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Jäsenen tunniste",
+            "en": "Member id"
+          },
+          "help": {
+            "fi": "Jäsenen tunniste. Lähdekenttä: memberId.",
+            "en": "Member id. Source field: memberId."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "activities.js",
+          "children": [],
+          "observed_only": true
+        },
+        {
+          "key": "commentId",
+          "path": "commentId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Kommentin tunniste",
+            "en": "Comment id"
+          },
+          "help": {
+            "fi": "Kommentin tunniste. Lähdekenttä: commentId.",
+            "en": "Comment id. Source field: commentId."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "activities.js",
+          "children": [],
+          "observed_only": true
+        },
+        {
+          "key": "commentText",
+          "path": "commentText",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Kommentin teksti",
+            "en": "Comment text"
+          },
+          "help": {
+            "fi": "Kommentin teksti. Lähdekenttä: commentText.",
+            "en": "Comment text. Source field: commentText."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "activities.js",
+          "children": [],
+          "observed_only": true
+        },
+        {
+          "key": "attachmentId",
+          "path": "attachmentId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Liitteen tunniste",
+            "en": "Attachment id"
+          },
+          "help": {
+            "fi": "Liitteen tunniste. Lähdekenttä: attachmentId.",
+            "en": "Attachment id. Source field: attachmentId."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "activities.js",
+          "children": [],
+          "observed_only": true
+        },
+        {
+          "key": "attachmentName",
+          "path": "attachmentName",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Liitteen nimi",
+            "en": "Attachment name"
+          },
+          "help": {
+            "fi": "Liitteen nimi. Lähdekenttä: attachmentName.",
+            "en": "Attachment name. Source field: attachmentName."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "attachments.js",
+          "children": [],
+          "observed_only": true
+        },
+        {
+          "key": "checklistId",
+          "path": "checklistId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Tarkistuslistan tunniste",
+            "en": "Checklist id"
+          },
+          "help": {
+            "fi": "Tarkistuslistan tunniste. Lähdekenttä: checklistId.",
+            "en": "Checklist id. Source field: checklistId."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "activities.js",
+          "children": [],
+          "observed_only": true
+        },
+        {
+          "key": "checklistItemId",
+          "path": "checklistItemId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Tarkistuskohdan tunniste",
+            "en": "Checklist item id"
+          },
+          "help": {
+            "fi": "Tarkistuskohdan tunniste. Lähdekenttä: checklistItemId.",
+            "en": "Checklist item id. Source field: checklistItemId."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "activities.js",
+          "children": [],
+          "observed_only": true
+        },
+        {
+          "key": "subtaskId",
+          "path": "subtaskId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Alitehtävän tunniste",
+            "en": "Subtask id"
+          },
+          "help": {
+            "fi": "Alitehtävän tunniste. Lähdekenttä: subtaskId.",
+            "en": "Subtask id. Source field: subtaskId."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "activities.js",
+          "children": [],
+          "observed_only": true
+        },
+        {
+          "key": "customFieldId",
+          "path": "customFieldId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Mukautetun kentän tunniste",
+            "en": "Custom field id"
+          },
+          "help": {
+            "fi": "Mukautetun kentän tunniste. Lähdekenttä: customFieldId.",
+            "en": "Custom field id. Source field: customFieldId."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "activities.js",
+          "children": [],
+          "observed_only": true
+        },
+        {
+          "key": "labelId",
+          "path": "labelId",
+          "type": "string",
+          "source_type": "String",
+          "label": {
+            "fi": "Tunnisteen tunniste",
+            "en": "Label id"
+          },
+          "help": {
+            "fi": "Tunnisteen tunniste. Lähdekenttä: labelId.",
+            "en": "Label id. Source field: labelId."
+          },
+          "group": "advanced",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "activities.js",
+          "children": [],
+          "observed_only": true
+        },
+        {
+          "key": "createdAt",
+          "path": "createdAt",
+          "type": "date",
+          "source_type": "Date",
+          "label": {
+            "fi": "Luotu",
+            "en": "Created at"
+          },
+          "help": {
+            "fi": "Luotu. Lähdekenttä: createdAt.",
+            "en": "Created at. Source field: createdAt."
+          },
+          "group": "dates",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "activities.js",
+          "children": [],
+          "observed_only": true
+        },
+        {
+          "key": "modifiedAt",
+          "path": "modifiedAt",
+          "type": "date",
+          "source_type": "Date",
+          "label": {
+            "fi": "Muokattu",
+            "en": "Modified at"
+          },
+          "help": {
+            "fi": "Muokattu. Lähdekenttä: modifiedAt.",
+            "en": "Modified at. Source field: modifiedAt."
+          },
+          "group": "dates",
+          "readonly": true,
+          "localized": false,
+          "optional": true,
+          "has_default": false,
+          "default": null,
+          "allowed_values": [],
+          "source": "activities.js",
+          "children": [],
+          "observed_only": true
+        }
+      ]
+    }
+  },
+  "unresolved_symbols": [
+    "TYPE_CARD",
+    "DEFAULT_DEPENDENCY_TYPE",
+    "DEFAULT_DEPENDENCY_COLOR",
+    "DEFAULT_DEPENDENCY_ICON",
+    "DEPENDENCY_TYPE_IDS",
+    "CARD_COLORS"
+  ],
+  "localization": "Only human text leaves are localized; array structures, identifiers, booleans, numbers and dates are shared. Custom-field values localize only when the actual value is a string."
+}
